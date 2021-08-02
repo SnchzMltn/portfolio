@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { AppBar, IconButton, Menu, MenuItem, Toolbar, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import { AccountCircle } from '@material-ui/icons';
 
 function Header() {
 	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
