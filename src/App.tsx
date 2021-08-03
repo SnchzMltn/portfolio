@@ -1,11 +1,19 @@
-import './components/header/Header.css';
 import Header from './components/header/Header';
 import AboutMeContent from './components/AboutMeContent/AboutMeContent';
+import { Typography } from '@material-ui/core';
 
 function App() {
   return (
     <div className="App">
+      <br/>
+      <br/>
+      <br/>
+      <Typography variant="h1" className="AppTitle">
+        Milton A. Sanchez M.
+      </Typography>
+      <br />
       <Header />
+      <br/>
       <AboutMeContent />
     </div>
   );
