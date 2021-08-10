@@ -12,10 +12,8 @@ function AboutMeContent() {
 					aria-controls="panel1a-content"
 					id="panel1a-header"
 				>
-					<Typography>
-						<p>
-							<h1>Experience</h1>
-						</p>
+					<Typography variant="h2">
+						Experience
 					</Typography>
 				</AccordionSummary>
 				<AccordionDetails>
@@ -48,10 +46,8 @@ function AboutMeContent() {
 					aria-controls="panel1a-content"
 					id="panel1a-header"
 				>
-					<Typography>
-						<h1>
-							<b>Proyectos</b>
-						</h1>
+					<Typography variant="h2">
+						Proyects
 					</Typography>
 				</AccordionSummary>
 				<AccordionDetails>
