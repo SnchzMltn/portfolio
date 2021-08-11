@@ -1,7 +1,7 @@
 import React from 'react';
-import './Header.css';
 import { AppBar, IconButton, Menu, MenuItem, Toolbar, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import './Header.css';
 
 function Header() {
 	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
