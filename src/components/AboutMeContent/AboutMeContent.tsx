@@ -1,4 +1,4 @@
-import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@material-ui/core';
+import { Accordion, AccordionDetails, AccordionSummary, Typography, Card, CardContent, CardActionArea, Box } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import './AboutMeContent.css';
 
@@ -17,27 +17,33 @@ function AboutMeContent() {
 					</Typography>
 				</AccordionSummary>
 				<AccordionDetails>
-					<Typography>
-						<h2 className="AccorAccordionDetailsTypographyTitle">
-							Technical Support Engineer -Twilio, Inc
-						</h2>
-						<p>
-							Several tasks performed, mainly focused on providing support in Levels 1, 2 and occasionally 3, within a 6-member team in charge of technically supporting the account security products developed and maintained in Colombia.
-							End-user support is provided, aswell as developer and personalized (custom) support for implementations of the Authy API in order to provide MFA solutions for applications already on production stage. Several software solutions are used on a daily basis including:
-							<ul>
-								<li>Kibana</li>
-								<li>DataDog</li>
-								<li>PagerDuty</li>
-								<li>Slack</li>
-								<li>Postman</li>
-								<li>Ngrok</li>
-								<li>Development tools</li>
-							</ul>
-						</p>
-						<h3>
-							April 23th 2018 - 01 October
-						</h3>
-					</Typography>
+					<Box sx={{maxWidth: '50%'}}>
+						<Card variant="outlined" >
+						<CardActionArea>
+							<CardContent>
+								<Typography variant="h2" component="div" className="AccorAccordionDetailsTypographyTitle">
+									Technical Support Engineer - Twilio, Inc
+								</Typography>
+								<Typography>
+									Several tasks performed, mainly focused on providing support in Levels 1, 2 and occasionally 3, within a 6-member team in charge of technically supporting the account security products developed and maintained in Colombia.
+									End-user support is provided, aswell as developer and personalized (custom) support for implementations of the Authy API in order to provide MFA solutions for applications already on production stage. Several software solutions are used on a daily basis including:
+									<ul>
+										<li>Kibana</li>
+										<li>DataDog</li>
+										<li>PagerDuty</li>
+										<li>Slack</li>
+										<li>Postman</li>
+										<li>Ngrok</li>
+										<li>Development tools</li>
+									</ul>
+									<h3>
+										April 23th 2018 - 01 October
+									</h3>
+								</Typography>
+							</CardContent>
+						</CardActionArea>
+					</Card>
+					</Box>
 				</AccordionDetails>
 			</Accordion>
 			<Accordion>
