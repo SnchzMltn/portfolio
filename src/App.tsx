@@ -1,20 +1,23 @@
 import Header from './components/header/Header';
 import AboutMeContent from './components/AboutMeContent/AboutMeContent';
-import { Typography } from '@material-ui/core';
+import ContactFormContent from './components/ContactFormContent/ContactFormContent';
 import './App.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <br/>
-      <br/>
-      <Typography variant="h1" className="AppTitle">
-        Milton A. Sanchez M.
-      </Typography>
-      <br />
-      <Header />
-      <br/>
-      <AboutMeContent />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<AboutMeContent />} />
+          <Route path='/contact/*' element={<ContactFormContent />} />
+        </Routes>
+        <Header />
+      </BrowserRouter>
     </div>
   );
 }

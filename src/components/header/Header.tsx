@@ -1,7 +1,10 @@
 import React from 'react';
 import { AppBar, IconButton, Menu, MenuItem, Toolbar, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+// import AboutMeContent from './../../components/AboutMeContent/AboutMeContent';
+// import ContactFormContent from './../../components/ContactFormContent/ContactFormContent';
 import './Header.css';
+import { Link } from "react-router-dom";
 
 function Header() {
 	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -11,7 +14,7 @@ function Header() {
 		setAnchorEl(event.currentTarget);
 	};
 
-	const handleClose = () => {
+	const handleClose = (event: React.MouseEvent<HTMLElement>) => {
 		setAnchorEl(null);
 	};
 
@@ -23,7 +26,7 @@ function Header() {
 						<MenuIcon />
 					</IconButton>
 					<Typography variant="h6" >
-						Menu
+						Milton Sanchez 
           			</Typography>
 					<Menu
 						id="menu-appbar"
@@ -40,8 +43,12 @@ function Header() {
 						open={open}
 						onClose={handleClose}
 					>
-						<MenuItem onClick={handleClose}>My Profile</MenuItem>
-						<MenuItem onClick={handleClose}>Contact Me</MenuItem>
+						<MenuItem onClick={handleClose} >
+							<Link to="/">About me</Link>
+						</MenuItem>
+						<MenuItem onClick={handleClose} >
+							<Link to="/contact">Contact Me</Link>
+						</MenuItem>
 					</Menu>
 				</Toolbar>
 			</AppBar>
