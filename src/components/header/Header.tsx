@@ -1,8 +1,6 @@
 import React from 'react';
 import { AppBar, IconButton, Menu, MenuItem, Toolbar, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-// import AboutMeContent from './../../components/AboutMeContent/AboutMeContent';
-// import ContactFormContent from './../../components/ContactFormContent/ContactFormContent';
 import './Header.css';
 import { Link } from "react-router-dom";
 
