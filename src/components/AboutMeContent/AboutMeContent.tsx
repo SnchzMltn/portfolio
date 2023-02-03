@@ -12,6 +12,13 @@ function AboutMeContent() {
 
 	return (
 		<div className="AboutMeContent">
+
+			<br/>
+			<br/>
+
+			<Typography variant="h1" align="center">
+						Milton Sanchez
+			</Typography>
 			<Accordion>
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
@@ -42,7 +49,16 @@ function AboutMeContent() {
 									<Typography variant="h5" component="div" className="AccorAccordionDetailsTypographyTitle">
 										{object.role} - {object.company}
 									</Typography>
-									{displayDetails[object.index] ? <CardContent role={object.role} company={object.company} description={object.description} tools={object.tools} extra_tools={object.extra_tools || []} dates={object.dates} /> : null}
+									{
+									  displayDetails[object.index] ?
+									    <CardContent 
+										    role={object.role} 
+											company={object.company} 
+											description={object.description} 
+											tools={object.tools} 
+											extra_tools={object.extra_tools || []} 
+											dates={object.dates} /> : null
+									}
 								</CardActionArea>
 							</Card>)
 						})}
