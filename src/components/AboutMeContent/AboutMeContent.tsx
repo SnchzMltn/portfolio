@@ -3,6 +3,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import React, { useState } from 'react';
 import './AboutMeContent.css';
 import { XP } from '../../static/xp.js';
+import prof_img from '../../static/img_prof_2048.jpeg';
 import { PROFESSIONAL_PROFILE } from '../../static/constants';
 import CardContent from '../CardContent/CardContent';
 
@@ -15,10 +16,25 @@ function AboutMeContent() {
 
 			<br/>
 			<br/>
+			<br/>
+			<br/>
 
 			<Typography variant="h1" align="center">
-						Milton Sanchez
+				Milton Sanchez
 			</Typography>
+			<br/>
+
+			<Typography variant="h2" align="center">
+				Fullstack Software Engineer
+			</Typography>
+
+			<div className="ProfilePhotoImage">
+				<img src={prof_img} alt="hi!" width="240" height="240" />
+			</div>
+
+			<br/>
+			<br/>
+
 			<Accordion>
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
