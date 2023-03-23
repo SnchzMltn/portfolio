@@ -24,7 +24,7 @@ function Header() {
 						<MenuIcon />
 					</IconButton>
 					<Typography variant="h6" >
-						Milton Sanchez 
+						Milton Sanchez | Fullstack Software Engineer
           			</Typography>
 					<Menu
 						id="menu-appbar"
