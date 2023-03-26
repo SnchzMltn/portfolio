@@ -1,14 +1,11 @@
-import { Accordion, AccordionDetails, AccordionSummary, Typography, Card, CardActionArea, Box } from '@material-ui/core';
+import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { useState } from 'react';
 import './AboutMeContent.css';
 import prof_img from '../../static/img_prof_2048.jpeg';
 import { PROFESSIONAL_PROFILE } from '../../static/constants';
 import Timeline from '../Timeline/Timeline';
 
 function AboutMeContent() {
-	const [toggle, setToggle] = useState(false)
-	const [displayDetails, setDisplayDetails] = useState([{}]);
 
 	return (
 		<div className="AboutMeContent">
