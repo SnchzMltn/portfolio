@@ -7,17 +7,24 @@ import { XP } from '../../static/xp';
 import './Timeline.css';
 
 function Timeline() {
-	const [xpArray, setXpArray] = React.useState([]);
-	const handleOpen = () => {
+	const [xpArray, setXpArray] = React.useState(new Array(XP.length).fill(false));
+	const handleOpen = (index: any) => () => {
+		console.debug("executed handle open function!");
 		setXpArray(prevState => {
-			console.log(xpArray);
-			console.log()
-			return [...prevState];
+			prevState[index] = true;
+			return prevState;
 		});
 	};
-	const handleClose = () => {
-		setXpArray(arr => [...arr]);
+
+	const handleClose = (index: number) => () => {
+		console.debug("executed handle close function!");
+		setXpArray(prevState => {
+			prevState[index] = false;
+			return prevState;
+		});
 	};
+
+	const expandedElement = xpArray.find(value => { return value === true });
 
 	return (
 		<div className="Timeline">
@@ -30,27 +37,29 @@ function Timeline() {
 							<TimelineConnector />
 							</TimelineSeparator>
 							<TimelineContent>
-								<Button key={item.index} onClick={handleOpen}>
+								<Button key={item.index} onClick={handleOpen(item.index)}>
 									{item.dates}
 									<br />
 									{item.role} @ ({item.company})
 								</Button>
-								<Dialog
-									open={xpArray[item.index]}
-									onClose={handleClose}
-								>
-									<Typography variant='h3' className='modal-header'>
-										{item.dates} - {item.company} - {item.role}
-									</Typography>
-									<Typography variant='body2'>
-										{item.description}
-										{item.tools.map(tool => {
-											return (
-												<li>{tool}</li>
-											)
-										})}
-									</Typography>
-								</Dialog>
+								{xpArray[item.index] &&
+										<Dialog
+											open={xpArray[item.index]}
+											onClose={handleClose(item.index)}
+										>
+											<Typography variant='h3'>
+												{item.dates} - {item.company} - {item.role}
+											</Typography>
+											<Typography variant='body2'>
+												{item.description}
+												{item.tools.map(tool => {
+													return (
+														<li>{tool}</li>
+													)
+												})}
+											</Typography>
+										</Dialog>
+								}
 							</TimelineContent>
 						</TimelineItem>
 					);
