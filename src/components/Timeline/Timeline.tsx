@@ -1,69 +1,99 @@
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import Typography from '@material-ui/core/Typography';
-import { Timeline as TimelineC, TimelineItem, TimelineSeparator, TimelineDot, TimelineConnector, TimelineContent } from '@mui/lab';
-import React from 'react';
+import { DialogContentText, DialogContent, Dialog, Typography, Button } from '@material-ui/core';
+import { Timeline as TimelineC, TimelineItem, TimelineSeparator, TimelineDot, TimelineConnector, TimelineContent, TimelineOppositeContent } from '@mui/lab';
 import { XP } from '../../static/xp';
+import React from 'react';
 import './Timeline.css';
 
 function Timeline() {
-	const [xpArray, setXpArray] = React.useState(new Array(XP.length).fill(false));
+	const [open, setOpen] = React.useState(false);
+	const [currentItemIndex, setCurrentItemIndex] = React.useState(-1);
+
 	const handleOpen = (index: any) => () => {
-		console.debug("executed handle open function!");
-		setXpArray(prevState => {
-			prevState[index] = true;
-			return prevState;
-		});
+		setOpen(() => true);
+		setCurrentItemIndex(() => index);
 	};
 
-	const handleClose = (index: number) => () => {
-		console.debug("executed handle close function!");
-		setXpArray(prevState => {
-			prevState[index] = false;
-			return prevState;
-		});
+	const handleClose = (_index: number) => () => {
+		setOpen(() => false);
+		setCurrentItemIndex(() => -1);
 	};
-
-	const expandedElement = xpArray.find(value => { return value === true });
 
 	return (
 		<div className="Timeline">
-			<TimelineC position='alternate'>
+			<TimelineC>
 				{XP.map(item => {
 					return (
 						<TimelineItem>
+							<TimelineOppositeContent>
+								<Button variant='outlined' key={item.index} onClick={handleOpen(item.index)}>
+									<Typography variant='h5'>
+										{item.role} @ ({item.company})
+									</Typography>
+								</Button>
+							</TimelineOppositeContent>
 							<TimelineSeparator>
 							<TimelineDot />
 							<TimelineConnector />
 							</TimelineSeparator>
 							<TimelineContent>
-								<Button key={item.index} onClick={handleOpen(item.index)}>
-									{item.dates}
-									<br />
-									{item.role} @ ({item.company})
-								</Button>
-								{xpArray[item.index] &&
-										<Dialog
-											open={xpArray[item.index]}
-											onClose={handleClose(item.index)}
-										>
-											<Typography variant='h3'>
-												{item.dates} - {item.company} - {item.role}
-											</Typography>
-											<Typography variant='body2'>
-												{item.description}
-												{item.tools.map(tool => {
-													return (
-														<li>{tool}</li>
-													)
-												})}
-											</Typography>
-										</Dialog>
-								}
+								<Typography variant='h6'>
+									{ item.dates }
+								</Typography>
 							</TimelineContent>
 						</TimelineItem>
 					);
 				})}
+				{
+					open &&
+					<Dialog
+						open={open}
+						onClose={handleClose(currentItemIndex)}
+					>
+						<DialogContent>
+							<DialogContentText>
+								<Typography variant='h3'>
+									{ XP[currentItemIndex].company} - {XP[currentItemIndex].role }
+								</Typography>
+								<Typography variant='h4'>
+									{ XP[currentItemIndex].dates }
+								</Typography>
+								<Typography variant='body1'>
+									<Typography variant='body2'>
+										{ XP[currentItemIndex].description }
+									</Typography>
+									<br/>
+									{ XP[currentItemIndex].tools? <Typography variant='h5'>Tools used:</Typography>: null }
+									{
+										<ul>
+											{
+												XP[currentItemIndex].tools.map(tool => {
+													return (
+														<li>{tool}</li>
+													)
+												})
+											}
+											
+										</ul>
+									}
+									<br/>
+									{ XP[currentItemIndex].tools? <Typography variant='h5'>Other tools used:</Typography>: null }
+									{
+										<ul>
+											{
+												XP[currentItemIndex].extra_tools?.map(tool => {
+													return (
+														<li>{tool}</li>
+													)
+												})
+											}
+											
+										</ul>
+									}
+								</Typography>
+							</DialogContentText>
+						</DialogContent>
+					</Dialog>
+				}
 			</TimelineC>
 		</div>
 	);
