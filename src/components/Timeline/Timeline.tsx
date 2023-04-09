@@ -8,7 +8,7 @@ function Timeline() {
 	const [open, setOpen] = React.useState(false);
 	const [currentItemIndex, setCurrentItemIndex] = React.useState(-1);
 
-	const handleOpen = (index: any) => () => {
+	const handleOpen = (index: number) => () => {
 		setOpen(() => true);
 		setCurrentItemIndex(() => index);
 	};
