@@ -8,11 +8,12 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import { ThemeProvider, createMuiTheme } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/core';
+import { createTheme } from '@material-ui/core/styles';
 
 function App() {
 
-  const theme = createMuiTheme({
+  const theme = createTheme({
     palette: {
       primary: {
         main: COLORS.main,
