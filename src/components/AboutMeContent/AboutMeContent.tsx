@@ -34,10 +34,8 @@ function AboutMeContent() {
 			<Accordion>
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
-					aria-controls="panel1a-content"
-					id="panel1a-header"
 				>
-					<Typography variant="h2">
+					<Typography variant='h2' align='center'>
 						Experience
 					</Typography>
 				</AccordionSummary>
@@ -48,15 +46,13 @@ function AboutMeContent() {
 			<Accordion>
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
-					aria-controls="panel1a-content"
-					id="panel1a-header"
 				>
-					<Typography variant="h2">
+					<Typography variant='h2' align='center'>
 						Professional profile
 					</Typography>
 				</AccordionSummary>
 				<AccordionDetails>
-					<Typography>
+					<Typography variant='body1'>
 						{PROFESSIONAL_PROFILE}
 					</Typography>
 				</AccordionDetails>
