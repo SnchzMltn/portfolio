@@ -1,6 +1,7 @@
 import Header from './components/header/Header';
 import AboutMeContent from './components/AboutMeContent/AboutMeContent';
 import ContactFormContent from './components/ContactFormContent/ContactFormContent';
+import BlogPage from './components/BlogPage/BlogPage';
 import './App.css';
 import { COLORS } from './static/constants';
 import {
@@ -30,6 +31,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<AboutMeContent />} />
+		        <Route path='/blog/*' element={<BlogPage />} />
             <Route path='/contact/*' element={<ContactFormContent />} />
           </Routes>
           <Header />
