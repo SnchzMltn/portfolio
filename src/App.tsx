@@ -1,6 +1,6 @@
 import Header from './components/header/Header';
-import AboutMeContent from './components/AboutMeContent/AboutMeContent';
-import ContactFormContent from './components/ContactFormContent/ContactFormContent';
+import AboutMeContent from './pages/AboutMeContent/AboutMeContent';
+import ContactFormContent from './pages/ContactFormContent/ContactFormContent';
 import './App.css';
 import { COLORS } from './static/constants';
 import {

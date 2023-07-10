@@ -25,20 +25,20 @@ function Timeline() {
 					return (
 						<TimelineItem>
 							<TimelineOppositeContent>
-								<Button variant='outlined' key={item.index} onClick={handleOpen(item.index)}>
-									<Typography variant='h5'>
-										{item.role} @ ({item.company})
-									</Typography>
-								</Button>
+								<Typography variant='subtitle2'>
+									{ item.dates }
+								</Typography>
 							</TimelineOppositeContent>
 							<TimelineSeparator>
-							<TimelineDot />
+							<TimelineDot color='grey' variant='outlined' />
 							<TimelineConnector />
 							</TimelineSeparator>
 							<TimelineContent>
-								<Typography variant='h6'>
-									{ item.dates }
-								</Typography>
+								<Button variant='outlined' key={item.index} onClick={handleOpen(item.index)}>
+									<Typography variant='body2'>
+										{item.role} @ ({item.company})
+									</Typography>
+								</Button>
 							</TimelineContent>
 						</TimelineItem>
 					);
