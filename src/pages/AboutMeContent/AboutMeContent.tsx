@@ -49,15 +49,13 @@ function AboutMeContent() {
 						<Stack sx={{
 							paddingLeft: '25em',
 							width: '50%',
-						}} align='center' spacing={2} >
-							<Paper sx={{
-								maxWidth: '50%'
-							}} elevation={6}>
+						}} spacing={2} >
+							<Paper elevation={6}>
 								<Typography variant='h5' align='center'>
 									Consulting
 								</Typography>
-								<Divider width='50%' sx={{ margin: '5px' }} />
-								<Typography variant='body2'>
+								<Divider sx={{ margin: '5px', width:'100%' }} />
+								<Typography align='center' variant='body2'>
 									I am currently available for consulting jobs.
 								</Typography>
 							</Paper>
@@ -65,8 +63,8 @@ function AboutMeContent() {
 								<Typography variant='h5' align='center'>
 									Tutoring / Workshops
 								</Typography>
-								<Divider width='50%' sx={{ margin: '5px' }} />
-								<Typography variant='body2'>
+								<Divider sx={{ margin: '5px', width:'100%' }} />
+								<Typography variant='body2' align='center'>
 									If you need help with your technical classes, projects, ideas, and you want to have a chat, reach out to me!
 								</Typography>
 							</Paper>
@@ -97,8 +95,8 @@ function AboutMeContent() {
 					</Typography>
 				</AccordionSummary>
 				<AccordionDetails>
-					<Paper elevation='3'>
-						<Typography alignText='center' variant='body1'>
+					<Paper elevation={3}>
+						<Typography align='center' variant='body1'>
 							{PROFESSIONAL_PROFILE}
 						</Typography>
 					</Paper>
