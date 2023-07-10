@@ -1,0 +1,81 @@
+<mxfile host="app.diagrams.net" modified="2023-07-01T18:30:27.507Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="y3adRby12syZiB69IgEF" version="21.3.6" type="device" pages="2">
+  <diagram name="About Me" id="CkMhDiF7Vf2swH3cbGLO">
+    <mxGraphModel dx="1105" dy="558" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f8chsIV09-Oeqfi-Jf8Q-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="80" y="12" width="450" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="f8chsIV09-Oeqfi-Jf8Q-2" value="Millton Sancheez" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="252.5" y="80" width="105" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f8chsIV09-Oeqfi-Jf8Q-3" value="&lt;div&gt;Fullstack software egineer&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="231.25" y="110" width="147.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f8chsIV09-Oeqfi-Jf8Q-4" value="Profile Pic" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="272.5" y="140" width="65" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="f8chsIV09-Oeqfi-Jf8Q-5" value="&lt;div align=&quot;left&quot;&gt;&amp;nbsp; Experience&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="100" y="245" width="410" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8chsIV09-Oeqfi-Jf8Q-6" value="&lt;div align=&quot;left&quot;&gt;&amp;nbsp; Professional profile &lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="100" y="320" width="410" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8chsIV09-Oeqfi-Jf8Q-7" value="" style="shape=mxgraph.arrows.arrow_down;html=1;verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=2;strokeColor=#666666;fillColor=#f5f5f5;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="460" y="263.5" width="30" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="f8chsIV09-Oeqfi-Jf8Q-8" value="" style="shape=mxgraph.arrows.arrow_down;html=1;verticalLabelPosition=bottom;verticalAlign=top;strokeWidth=2;strokeColor=#666666;fillColor=#f5f5f5;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="460" y="338.5" width="30" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="f8chsIV09-Oeqfi-Jf8Q-9" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="12" width="450" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="f8chsIV09-Oeqfi-Jf8Q-10" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;" vertex="1" parent="1">
+          <mxGeometry x="100" y="21" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f8chsIV09-Oeqfi-Jf8Q-11" value="Millton Sancheez | Fullstack Software Engineer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="150" y="21" width="280" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="mHA6PerJ5XFU59l1CR5j" name="Contact Me">
+    <mxGraphModel dx="1050" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8y7CinrNHv_Iboounq42-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="80" y="12" width="450" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="8y7CinrNHv_Iboounq42-2" value="Contact" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="252.5" y="80" width="105" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8y7CinrNHv_Iboounq42-3" value="&lt;div align=&quot;left&quot;&gt;&lt;h4 class=&quot;MuiTypography-root MuiTypography-h4 MuiTypography-alignLeft css-y59ln4-MuiTypography-root&quot;&gt;I&#39;d like to hear from you!&lt;/h4&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="110" width="147.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8y7CinrNHv_Iboounq42-9" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="12" width="450" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="8y7CinrNHv_Iboounq42-10" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;" vertex="1" parent="1">
+          <mxGeometry x="100" y="21" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8y7CinrNHv_Iboounq42-11" value="Millton Sancheez | Fullstack Software Engineer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="150" y="21" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8y7CinrNHv_Iboounq42-12" value="&lt;div style=&quot;font-size: 9px;&quot; align=&quot;left&quot;&gt;&lt;p class=&quot;MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft css-zpphrz-MuiTypography-root&quot; style=&quot;font-size: 9px;&quot;&gt;I&#39;m currently open for work, please let me know via any of the channels below if you&#39;re intersted in working together!&lt;/p&gt;&lt;h4 class=&quot;MuiTypography-root MuiTypography-h4 MuiTypography-alignLeft css-y59ln4-MuiTypography-root&quot; style=&quot;font-size: 9px;&quot;&gt;&lt;/h4&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="140" width="410" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8y7CinrNHv_Iboounq42-13" value="Mail" style="icon;html=1;image=img/clipart/Gear_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="240" y="180" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8y7CinrNHv_Iboounq42-14" value="Github" style="icon;html=1;image=img/clipart/Gear_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="170" y="180" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8y7CinrNHv_Iboounq42-15" value="LinkedIn" style="icon;html=1;image=img/clipart/Gear_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="100" y="180" width="60" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
