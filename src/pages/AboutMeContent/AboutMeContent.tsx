@@ -1,10 +1,23 @@
-import { Accordion, AccordionDetails, AccordionSummary, Typography, Paper } from '@material-ui/core';
-import { Stack, Divider } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Typography, Paper, List, ListItem, Box } from '@material-ui/core';
+import { Stack, Divider, Rating } from '@mui/material';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import './AboutMeContent.css';
 import prof_img from '../../static/img_prof_2048.jpeg';
 import { PROFESSIONAL_PROFILE } from '../../static/constants';
 import Timeline from '../../components/Timeline/Timeline';
+
+type Skill = {
+	name: string,
+	rate: number,
+}
+
+const skillsArray: Skill[] = [
+	{name: "Java (JDK 8+)", rate: 4}, 
+	{name: "Relational Database (SQL)", rate: 5}, 
+	{name: "Non-relational Database (NoSQL)", rate: 4}, 
+	{name: "React", rate: 3.5}, 
+	{name: "HTML5/CSS3", rate: 5}
+]
 
 function AboutMeContent() {
 
@@ -36,6 +49,21 @@ function AboutMeContent() {
 				#OpenToWork
 			</Typography>
 
+			<br/>
+
+			<Box alignContent='center' sx={{ paddingLeft: '25em', width: '50%' }}>
+				<Paper elevation={3}>
+					<List>
+						{skillsArray.map((skill) => {
+							return <>
+								<ListItem>{skill.name}</ListItem> <Rating sx={{
+									margin: '10px'
+								}} value={skill.rate} precision={0.5} readOnly />
+							</>;
+						})}
+					</List>
+				</Paper>
+			</Box>
 			<br/>
 
 			<Accordion>
