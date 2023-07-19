@@ -1,5 +1,5 @@
 import { Accordion, AccordionDetails, AccordionSummary, Typography, Paper, List, ListItem, Box } from '@material-ui/core';
-import { Stack, Divider, Rating } from '@mui/material';
+import { Stack, Divider, CircularProgress } from '@mui/material';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import './AboutMeContent.css';
 import prof_img from '../../static/img_prof_2048.jpeg';
@@ -9,14 +9,18 @@ import Timeline from '../../components/Timeline/Timeline';
 type Skill = {
 	name: string,
 	rate: number,
+	progress: number,
 }
 
 const skillsArray: Skill[] = [
-	{name: "Java (JDK 8+)", rate: 4}, 
-	{name: "Relational Database (SQL)", rate: 5}, 
-	{name: "Non-relational Database (NoSQL)", rate: 4}, 
-	{name: "React", rate: 3.5}, 
-	{name: "HTML5/CSS3", rate: 5}
+	{name: "Java (JDK 8+)", rate: 5, progress: 100},
+	{name: "Python", rate: 4, progress: 80},
+	{name: "Relational Database (SQL)", rate: 5, progress: 100}, 
+	{name: "Non-relational Database (NoSQL)", rate: 4, progress: 80}, 
+	{name: "React", rate: 3.5, progress: 75}, 
+	{name: "HTML5/CSS3", rate: 5, progress: 100},
+	{name: "AWS", rate: 4, progress: 80},
+	{name: "GCP", rate: 3.5, progress: 75},
 ]
 
 function AboutMeContent() {
@@ -51,15 +55,19 @@ function AboutMeContent() {
 
 			<br/>
 
-			<Box alignContent='center' sx={{ paddingLeft: '25em', width: '50%' }}>
+			<Box sx={{ paddingLeft: '25em', width: '50%' }}>
 				<Paper elevation={3}>
 					<List>
 						{skillsArray.map((skill) => {
-							return <>
-								<ListItem>{skill.name}</ListItem> <Rating sx={{
-									margin: '10px'
-								}} value={skill.rate} precision={0.5} readOnly />
-							</>;
+							return <Stack direction='row' sx={{
+								paddingTop: '0.15em',
+								paddingBottom: '0.15em',
+								paddingLeft: '10em',
+								width: '60%',
+								}}  spacing={2}>
+									<ListItem>{skill.name}</ListItem>
+									<CircularProgress variant='determinate' value={skill.progress} />
+							</Stack>;
 						})}
 					</List>
 				</Paper>
