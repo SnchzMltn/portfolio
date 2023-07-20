@@ -1,5 +1,5 @@
 import { Accordion, AccordionDetails, AccordionSummary, Typography, Paper, List, ListItem, Box } from '@material-ui/core';
-import { Stack, Divider, CircularProgress } from '@mui/material';
+import { Stack, Divider, LinearProgress } from '@mui/material';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import './AboutMeContent.css';
 import prof_img from '../../static/img_prof_2048.jpeg';
@@ -19,8 +19,8 @@ const skillsArray: Skill[] = [
 	{name: "Non-relational Database (NoSQL)", rate: 4, progress: 80}, 
 	{name: "React", rate: 3.5, progress: 75}, 
 	{name: "HTML5/CSS3", rate: 5, progress: 100},
-	{name: "AWS", rate: 4, progress: 80},
-	{name: "GCP", rate: 3.5, progress: 75},
+	{name: "Amazon Web Services", rate: 4, progress: 80},
+	{name: "Google Cloud Platform", rate: 3.5, progress: 75},
 ]
 
 function AboutMeContent() {
@@ -55,19 +55,35 @@ function AboutMeContent() {
 
 			<br/>
 
-			<Box sx={{ paddingLeft: '25em', width: '50%' }}>
-				<Paper elevation={3}>
+			<Box sx={{ paddingLeft: '25%', width: '50%' }}>
+				<Paper>
 					<List>
 						{skillsArray.map((skill) => {
-							return <Stack direction='row' sx={{
-								paddingTop: '0.15em',
-								paddingBottom: '0.15em',
-								paddingLeft: '10em',
-								width: '60%',
+							return <>
+								<Stack direction='row' sx={{
+								paddingTop: '0.2%',
+								paddingBottom: '0.2%',
+								paddingLeft: '25%',
+								width: '50%',
 								}}  spacing={2}>
-									<ListItem>{skill.name}</ListItem>
-									<CircularProgress variant='determinate' value={skill.progress} />
-							</Stack>;
+									<>
+										<ListItem>
+											<Typography variant='body2' noWrap >
+												{skill.name}
+											</Typography>
+										</ListItem>
+										<Box sx={{ margin: '15%' }} width='50%'>
+											<LinearProgress sx={{
+												margin: '5%',
+												marginTop: '10%',
+												paddingTop: '5%',
+												paddingBottom: '0.5%',
+											}} variant='determinate' value={skill.progress} />
+										</Box>
+									</>
+								</Stack>
+								<Divider variant='middle' />
+							</>
 						})}
 					</List>
 				</Paper>
@@ -82,31 +98,30 @@ function AboutMeContent() {
 						Services
 					</Typography>
 				</AccordionSummary>
-						<Stack sx={{
-							paddingLeft: '25em',
-							width: '50%',
-						}} spacing={2} >
-							<Paper elevation={6}>
-								<Typography variant='h5' align='center'>
-									Consulting
-								</Typography>
-								<Divider sx={{ margin: '5px', width:'100%' }} />
-								<Typography align='center' variant='body2'>
-									I am currently available for consulting jobs.
-								</Typography>
-							</Paper>
-							<Paper elevation={6}>
-								<Typography variant='h5' align='center'>
-									Tutoring / Workshops
-								</Typography>
-								<Divider sx={{ margin: '5px', width:'100%' }} />
-								<Typography variant='body2' align='center'>
-									If you need help with your technical classes, projects, ideas, and you want to have a chat, reach out to me!
-								</Typography>
-							</Paper>
-						</Stack>
 				<AccordionDetails>
-
+					<Stack sx={{
+						paddingLeft: '25%',
+						width: '50%',
+					}} spacing={2} >
+						<Paper elevation={6}>
+							<Typography variant='h5' align='center'>
+								Consulting
+							</Typography>
+							<Divider sx={{ margin: '1%', width:'100%' }} />
+							<Typography align='center' variant='body2'>
+								I am currently available for consulting jobs.
+							</Typography>
+						</Paper>
+						<Paper elevation={6}>
+							<Typography variant='h5' align='center'>
+								Tutoring / Workshops
+							</Typography>
+							<Divider sx={{ margin: '1%', width:'100%' }} />
+							<Typography variant='body2' align='center'>
+								If you need help with your technical classes, projects, ideas, and you want to have a chat, reach out to me!
+							</Typography>
+						</Paper>
+					</Stack>
 				</AccordionDetails>
 			</Accordion>
 
