@@ -2,8 +2,10 @@ import { Accordion, AccordionDetails, AccordionSummary, Typography, Paper, List,
 import { Stack, Divider, LinearProgress } from '@mui/material';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import './AboutMeContent.css';
+
 import prof_img from '../../static/img_prof_2048.jpeg';
 import { PROFESSIONAL_PROFILE } from '../../static/constants';
+
 import Timeline from '../../components/Timeline/Timeline';
 
 type Skill = {
@@ -31,14 +33,8 @@ function AboutMeContent() {
 			<br/>
 			<br/>
 			<br/>
-			<br/>
 
-			<Typography variant='h1' align='center'>
-				Milton Sanchez
-			</Typography>
-			<br/>
-
-			<Typography variant='h2' align='center'>
+			<Typography variant='h3' align='center'>
 				Fullstack Software Engineer
 			</Typography>
 
@@ -49,37 +45,35 @@ function AboutMeContent() {
 			<br/>
 			<br/>
 
-			<Typography variant='h2' align='center'>
+			<Typography variant='h4' align='center'>
 				#OpenToWork
 			</Typography>
 
 			<br/>
 
-			<Box sx={{ paddingLeft: '25%', width: '50%' }}>
+			<Box sx={{ marginLeft: '25%', width: '50%' }}>
 				<Paper>
 					<List>
 						{skillsArray.map((skill) => {
 							return <>
 								<Stack direction='row' sx={{
-								paddingTop: '0.2%',
-								paddingBottom: '0.2%',
-								paddingLeft: '25%',
-								width: '50%',
+									paddingTop: '0.2%',
+									paddingBottom: '0.2%',
+									marginLeft: 'auto',
+									marginRight: 'auto',
 								}}  spacing={2}>
 									<>
 										<ListItem>
 											<Typography variant='body2' noWrap >
 												{skill.name}
 											</Typography>
+											<Box width='50%' marginLeft='auto' marginRight='5%'>
+												<LinearProgress sx={{
+													marginTop: 'auto',
+													marginBottom: 'auto',
+												}} variant='determinate' value={skill.progress} />
+											</Box>
 										</ListItem>
-										<Box sx={{ margin: '15%' }} width='50%'>
-											<LinearProgress sx={{
-												margin: '5%',
-												marginTop: '10%',
-												paddingTop: '5%',
-												paddingBottom: '0.5%',
-											}} variant='determinate' value={skill.progress} />
-										</Box>
 									</>
 								</Stack>
 								<Divider variant='middle' />
