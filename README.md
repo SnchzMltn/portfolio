@@ -21,12 +21,11 @@ npm run build
 ```
 4. Use forever to stop,  and run the application (from root directory) in the background
 ```bash
-forever stopall
-forever start "npm run start"
+forever stopall && forever start -c "npm start" ./
 ```
 5. Refresh Nginx
 ```bash
-sudo  service restart nginx
+sudo service nginx restart
 ```
 
 <br/>
