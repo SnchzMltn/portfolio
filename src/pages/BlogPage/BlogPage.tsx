@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { fetchPosts } from '../../axios/PostsHelper';
-import { Posts } from '../../axios/Posts.d';
+import { Posts } from '../../axios/Posts';
 import './BlogPage.css';
 
 function BlogPage(): JSX.Element {

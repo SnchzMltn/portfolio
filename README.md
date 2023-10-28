@@ -10,18 +10,40 @@
 
 # How to deploy
 
-To deploy the app is using gcloud delivery service, in which once the code is a host we can build the project:
+1. Login to [GCP Instances](https://console.cloud.google.com/compute/instances?project=portfolio-322621&tab=instances)
+2. Fetch all changes
+```bash
+git fetch
+```
+3. Build React app
+```bash
+npm run build
+```
+4. Use forever to stop,  and run the application (from root directory) in the background
+```bash
+forever stopall && forever start -c "npm start" ./
+```
+5. Refresh Nginx
+```bash
+sudo service nginx restart
+```
 
-`npm run build`
+<br/>
 
-If everything goes OK we can:
+Not working:
 
-`gcloud app deploy`
+~To deploy the app is using gcloud delivery service, in which once the code is a host we can build the project:~
 
-Which will thake our project and deploy it to a named configuration (`app`).
+~`npm run build`~
+
+~If everything goes OK we can:~
+
+~`gcloud app deploy`~
+
+~Which will thake our project and deploy it to a named configuration (`app`).~
 
 # Visit the page: 
 
-After deployed, at the host: https://portfolio-322621.ue.r.appspot.com
+After deployed, at the host: http://34.28.209.189/
 
 Public site: www.miltonsanchez.com

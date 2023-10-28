@@ -1,0 +1,8 @@
+.Timeline {
+	padding-left: 20%;
+}
+
+.MuiButton-outlined :hover {
+	background-color: #93BFCF;
+	border-radius: 90%;
+}

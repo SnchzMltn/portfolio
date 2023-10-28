@@ -1,8 +1,9 @@
 import React from 'react';
-import { AppBar, IconButton, Menu, MenuItem, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, IconButton, Menu, MenuItem, Toolbar } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import './Header.css';
 import { Link } from "react-router-dom";
+import name_typography from '../../static/name_typography.png';
 
 function Header() {
 	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -23,9 +24,9 @@ function Header() {
 					<IconButton edge="start" color="inherit" aria-label="menu" onClick={handleMenu}>
 						<MenuIcon />
 					</IconButton>
-					<Typography variant="h6" >
-						Milton Sanchez | Fullstack Software Engineer
-          			</Typography>
+					<div className='NameTypography'>
+						<img src={name_typography} alt='typography' width='64' height='64' />
+					</div>
 					<Menu
 						id="menu-appbar"
 						anchorEl={anchorEl}
