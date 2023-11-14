@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import { ThemeProvider } from '@material-ui/core';
 import { createTheme } from '@material-ui/core/styles';
+import BlogPage from './pages/BlogPage/BlogPage';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<AboutMeContent />} />
+            <Route path='/blog/*' element={<BlogPage />} />
             <Route path='/contact/*' element={<ContactFormContent />} />
           </Routes>
           <Header />
