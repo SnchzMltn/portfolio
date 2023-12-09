@@ -1,0 +1,32 @@
+div.mainContainer {
+	align-content: center;
+	align-items: center;
+	padding-top: 64px;
+	display: inline-grid;
+	row-gap: 15px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		"header header header header"
+		"main . . sidebar";
+}
+
+.tableContainer {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header {
+	grid-area: header;
+}
+
+.main {
+	text-align: justify;
+	padding-left: 15px;
+	grid-area: main;
+}
+
+.sidebar {
+	grid-area: sidebar;
+}
