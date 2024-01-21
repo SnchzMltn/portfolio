@@ -65,7 +65,7 @@ function AboutMeContent() {
 			<Box sx={{ marginLeft: '25%', width: '50%' }}>
 				<Paper>
 					<List>
-						{skillsArray.map((skill) => {
+						{skillsArray.map((skill, i) => {
 							return <>
 								<Stack direction='row' sx={{
 									paddingTop: '0.2%',
@@ -74,7 +74,7 @@ function AboutMeContent() {
 									marginRight: 'auto',
 								}}  spacing={2}>
 									<>
-										<ListItem>
+										<ListItem key={i} >
 											<Box width='100%'>
 												<Stack justifyContent='left' direction='row' spacing={2}>
 													<Box width='10%'>

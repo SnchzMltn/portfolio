@@ -28,14 +28,16 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<AboutMeContent />} />
-            <Route path='/blog/*' element={<BlogPage />} />
-            <Route path='/contact/*' element={<ContactFormContent />} />
-          </Routes>
-          <Header />
-        </BrowserRouter>
+        <div className="Background">
+          <BrowserRouter>
+              <Routes>
+                <Route path='/' element={<AboutMeContent />} />
+                <Route path='/blog/*' element={<BlogPage />} />
+                <Route path='/contact' element={<ContactFormContent />} />
+              </Routes>
+              <Header />
+          </BrowserRouter>
+        </div>
       </ThemeProvider>
     </div>
   );
