@@ -11,8 +11,23 @@ import {
 import { ThemeProvider } from '@material-ui/core';
 import { createTheme } from '@material-ui/core/styles';
 import BlogPage from './pages/BlogPage/BlogPage';
+import BlogPageDetail from './components/BlogPageDetailMarkdown/BlogPageDetail';
+import { useEffect, useState } from 'react';
+import { fetchPosts } from './services/PostsApiHelper';
+import { Posts } from './services/Posts';
 
 function App() {
+
+  const [posts, setPosts] = useState<Posts[]>([]);
+  useEffect(() => {
+  	try {
+  		fetchPosts().then(postsArray => {
+  		  setPosts(postsArray);
+  		})
+  	} catch (error) {
+  		console.error('Error:', error);
+  	}
+  }, []);
 
   const theme = createTheme({
     palette: {
@@ -28,14 +43,17 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<AboutMeContent />} />
-            <Route path='/blog/*' element={<BlogPage />} />
-            <Route path='/contact/*' element={<ContactFormContent />} />
-          </Routes>
-          <Header />
-        </BrowserRouter>
+        <div className="Background">
+          <BrowserRouter>
+              <Routes>
+                <Route path='/' element={<AboutMeContent />} />
+                <Route path='/blog' element={<BlogPage blogItems={posts} />} />
+                <Route path='/blog/:id' element={<BlogPageDetail blogItems={posts} />} />
+                <Route path='/contact' element={<ContactFormContent />} />
+              </Routes>
+              <Header />
+          </BrowserRouter>
+        </div>
       </ThemeProvider>
     </div>
   );

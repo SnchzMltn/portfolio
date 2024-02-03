@@ -4,11 +4,11 @@ div.mainContainer {
 	padding-top: 64px;
 	display: inline-grid;
 	row-gap: 15px;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: auto;
 	grid-template-rows: auto;
 	grid-template-areas: 
 		"header header header header"
-		"main . . sidebar";
+		"main . . link";
 }
 
 .tableContainer {

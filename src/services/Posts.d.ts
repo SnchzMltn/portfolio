@@ -1,5 +1,5 @@
 interface Posts {
-	id: number,
+	id: string,
 	createdTime: Date,
 	title: string,
 	status: {
