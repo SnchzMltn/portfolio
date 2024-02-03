@@ -12,5 +12,14 @@ async function fetchPosts(): Promise<Posts[]> {
 			}
 		});
       }
+
+async function fetchPostsById(id: string): Promise<Posts> {
+	return await fetch(`${BASE_URL}${POSTS_ENDPOINT}/${id}`)
+		.then(response => {
+			if (response.ok) {
+				return response.json();
+			}
+		});
+      }
       
-export { fetchPosts };
+export { fetchPosts, fetchPostsById };

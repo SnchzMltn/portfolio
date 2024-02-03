@@ -48,6 +48,9 @@ function Header() {
 						<MenuItem onClick={handleClose} >
 							<Link to="/contact">Contact Me</Link>
 						</MenuItem>
+						<MenuItem onClick={handleClose} >
+							<Link to="/blog">Blog</Link>
+						</MenuItem>
 					</Menu>
 				</Toolbar>
 			</AppBar>

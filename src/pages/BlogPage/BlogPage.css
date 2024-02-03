@@ -8,7 +8,7 @@ div.mainContainer {
 	grid-template-rows: auto;
 	grid-template-areas: 
 		"header header header header"
-		"main . . sidebar";
+		"main . sidebar link";
 }
 
 .tableContainer {
