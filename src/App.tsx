@@ -15,7 +15,6 @@ import BlogPageDetail from './components/BlogPageDetailMarkdown/BlogPageDetail';
 import { useEffect, useState } from 'react';
 import { fetchPosts } from './services/PostsApiHelper';
 import { Posts } from './services/Posts';
-import findPostById from './services/Util';
 
 function App() {
 
