@@ -2,7 +2,23 @@
 	padding-left: 20%;
 }
 
-.MuiButton-outlined :hover {
-	background-color: #93BFCF;
-	border-radius: 90%;
+.MuiButton-outlined {
+	box-shadow: inset 0 0 0 0 #93BFCF;
+	color: #93BFCF;
+	padding: 0 .25rem;
+	margin: 0 -.25rem;
+	transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.MuiButton-outlined:hover {
+	box-shadow: inset 200px 0 0 0 #93BFCF;
+}
+
+/* Presentational styles */
+.MuiButton-outlined {
+	color: #93BFCF;
+	font-family: 'Poppins', sans-serif;
+	font-size: 27px;
+	font-weight: 700;
+	line-height: 1.5;
+	text-decoration: none;
 }
