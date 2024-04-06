@@ -1,0 +1,13 @@
+body {
+	color: white;
+}
+
+.MuiStack-root img {
+	background-color: white;
+	border-radius: 50%;
+	border-style: '15px white';
+}
+
+.MuiStack-root img:hover {
+	background-color: #93BFCF;
+}

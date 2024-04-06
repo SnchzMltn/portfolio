@@ -117,22 +117,30 @@ function AboutMeContent() {
 						width: '50%',
 					}} spacing={2} >
 						<Paper elevation={6}>
-							<Typography variant='h5' align='center'>
-								Consulting
-							</Typography>
-							<Divider sx={{ margin: '1%', width:'100%' }} />
-							<Typography align='center' variant='body2'>
-								I am currently available for consulting jobs.
-							</Typography>
+							<div style={{ margin: '1.5%' }}>
+								<Typography variant='h5' align='center'>
+									Consulting
+								</Typography>
+							</div>
+							<Divider sx={{ margin: '1%' }} />
+							<div style={{ margin: '1.5%' }}>
+								<Typography align='center' variant='body2'>
+									I am currently available for consulting jobs.
+								</Typography>
+							</div>
 						</Paper>
 						<Paper elevation={6}>
-							<Typography variant='h5' align='center'>
-								Tutoring / Workshops
-							</Typography>
-							<Divider sx={{ margin: '1%', width:'100%' }} />
-							<Typography variant='body2' align='center'>
-								If you need help with your technical classes, projects, ideas, and you want to have a chat, reach out to me!
-							</Typography>
+							<div style={{ margin: '1.5%' }}>
+								<Typography variant='h5' align='center'>
+									Tutoring / Workshops
+								</Typography>
+							</div>
+							<Divider sx={{ margin: '1%'}} />
+							<div style={{ margin: '1.5%' }}>
+								<Typography variant='body2' align='center'>
+									If you need help with your technical classes, projects, ideas, and you want to have a chat, reach out to me!
+								</Typography>
+							</div>
 						</Paper>
 					</Stack>
 				</AccordionDetails>
@@ -159,10 +167,12 @@ function AboutMeContent() {
 					</Typography>
 				</AccordionSummary>
 				<AccordionDetails>
-					<Paper elevation={3}>
-						<Typography align='center' variant='body1'>
-							{PROFESSIONAL_PROFILE}
-						</Typography>
+					<Paper elevation={6}>
+						<div style={{ margin: '2.5%' }}>
+							<Typography align='center' variant='body1'>
+								{PROFESSIONAL_PROFILE}
+							</Typography>
+						</div>
 					</Paper>
 				</AccordionDetails>
 			</Accordion>

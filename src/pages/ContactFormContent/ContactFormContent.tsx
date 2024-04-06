@@ -3,6 +3,7 @@ import { Box, Stack, Typography } from '@mui/material';
 import linkedIn from '../../static/icons/linkedin-original.svg';
 import github from '../../static/icons/github.svg';
 import gmail from '../../static/icons/google-gmail.svg';
+import './ContactFormContent.css';
 
 
 function ContactFromContent() {
