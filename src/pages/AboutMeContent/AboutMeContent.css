@@ -13,3 +13,10 @@ body {
 	border-radius: 50%;
 	border: 5px solid #6096B4;
 }
+
+.AccordionSubtitle {
+	padding: .7%;
+	margin-left: 20%;
+	border: 5px solid #6096B4;
+	border-radius: 50px;
+}

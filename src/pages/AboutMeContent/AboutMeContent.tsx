@@ -107,7 +107,7 @@ function AboutMeContent() {
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
 				>
-					<Typography variant='h2' align='center'>
+					<Typography variant='h2' align='center' className='AccordionSubtitle'>
 						Services
 					</Typography>
 				</AccordionSummary>
@@ -150,7 +150,7 @@ function AboutMeContent() {
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
 				>
-					<Typography variant='h2' align='center'>
+					<Typography variant='h2' align='center' className='AccordionSubtitle'>
 						Experience
 					</Typography>
 				</AccordionSummary>
@@ -162,7 +162,7 @@ function AboutMeContent() {
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
 				>
-					<Typography variant='h2' align='center'>
+					<Typography variant='h2' align='center' className='AccordionSubtitle'>
 						Professional profile
 					</Typography>
 				</AccordionSummary>

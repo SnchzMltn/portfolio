@@ -1,10 +1,22 @@
+a {
+	box-shadow: inset 0 0 0 0 #93BFCF;
+	transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	box-shadow: inset 200px 0 0 0 #93BFCF;
+}
+
 .Header {
 	text-align: center;
 }
 
 .NameTypography {
 	background-color: white;
+	border: 2px solid black;
 	margin-top: 3px;
 	margin-bottom: 3px;
-	border-radius: 5%;
+	border-radius: 20px;
 }

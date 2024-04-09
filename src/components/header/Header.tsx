@@ -1,8 +1,8 @@
 import React from 'react';
 import { AppBar, IconButton, Menu, MenuItem, Toolbar } from '@material-ui/core';
+import { Link } from "react-router-dom";
 import MenuIcon from '@material-ui/icons/Menu';
 import './Header.css';
-import { Link } from "react-router-dom";
 import name_typography from '../../static/name_typography.png';
 
 function Header() {
