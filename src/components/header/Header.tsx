@@ -49,6 +49,9 @@ function Header() {
 							<Link to="/contact">Contact Me</Link>
 						</MenuItem>
 						<MenuItem onClick={handleClose} >
+							<Link to="/news">News</Link>
+						</MenuItem>
+						<MenuItem onClick={handleClose} >
 							<Link to="/blog">Blog</Link>
 						</MenuItem>
 					</Menu>

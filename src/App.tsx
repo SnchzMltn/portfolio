@@ -15,6 +15,7 @@ import BlogPageDetail from './components/BlogPageDetailMarkdown/BlogPageDetail';
 import { useEffect, useState } from 'react';
 import { fetchPosts } from './services/PostsApiHelper';
 import { Posts } from './services/Posts';
+import HackerNewsTopStories from './pages/HackerNewsTopStories/HackerNewsTopStories';
 
 function App() {
 
@@ -50,6 +51,7 @@ function App() {
                 <Route path='/blog' element={<BlogPage blogItems={posts} />} />
                 <Route path='/blog/:id' element={<BlogPageDetail blogItems={posts} />} />
                 <Route path='/contact' element={<ContactFormContent />} />
+                <Route path='/news' element={<HackerNewsTopStories />} />
               </Routes>
               <Header />
           </BrowserRouter>
