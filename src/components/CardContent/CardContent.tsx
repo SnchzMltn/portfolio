@@ -1,7 +1,7 @@
 import React from "react";
 import { CardContent as CardContentC, Typography } from "@material-ui/core";
 
-function CardContent(object: { role: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; company: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; description: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; tools: (boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | String[] | null | undefined)[]; extra_tools: any[]; dates: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }) {
+function CardContent(object: { role: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; company: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; description: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; tools: any[]; extra_tools: any[]; dates: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }) {
 	return (
 		<CardContentC>
 			
@@ -10,18 +10,18 @@ function CardContent(object: { role: boolean | React.ReactChild | React.ReactFra
 
 				<ul>
 					<h3>Main tools used:</h3>
-					{object.tools.map((tool: boolean | Array<String> | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined) => {
+					{object.tools.map(tool => {
 						return (
-							<li>{tool}</li>
+							<li key={tool}>{tool}</li>
 						)
 					})}
 				</ul>
 
-				{object.extra_tools?.map((extra_tool: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined) => {
+				{object.extra_tools?.map(extraTool => {
 					return (
 						<div>
 							<ul>
-								<li>{extra_tool}</li>
+								<li key={extraTool}>{extraTool}</li>
 							</ul>
 						</div>
 					)

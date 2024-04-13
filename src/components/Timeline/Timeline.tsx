@@ -30,8 +30,8 @@ function Timeline() {
 								</Typography>
 							</TimelineOppositeContent>
 							<TimelineSeparator>
-							<TimelineDot color='grey' variant='outlined' />
-							<TimelineConnector />
+								<TimelineDot color='grey' variant='outlined' />
+								<TimelineConnector />
 							</TimelineSeparator>
 							<TimelineContent>
 								<Button variant='outlined' key={item.index} onClick={handleOpen(item.index)}>
@@ -68,7 +68,7 @@ function Timeline() {
 											{
 												XP[currentItemIndex].tools.map(tool => {
 													return (
-														<li>{tool}</li>
+														<li key={tool}>{tool}</li>
 													)
 												})
 											}
@@ -82,7 +82,7 @@ function Timeline() {
 											{
 												XP[currentItemIndex].extra_tools?.map(tool => {
 													return (
-														<li>{tool}</li>
+														<li key={tool}>{tool}</li>
 													)
 												})
 											}

@@ -39,28 +39,21 @@ const skillsArray: Skill[] = [
 function AboutMeContent() {
 
 	return (
-		<div className='AboutMeContent'>
+		<div style={{
+			display: 'block'
+		}} className='AboutMeContent'>
 
-			<br/>
-			<br/>
-			<br/>
+			<Box sx={{
+				margin: '5%'
+			}} >
+				<Typography variant='h3' align='center'>
+					Fullstack Software Engineer
+				</Typography>
 
-			<Typography variant='h3' align='center'>
-				Fullstack Software Engineer
-			</Typography>
-
-			<div className='ProfilePhotoImage'>
-				<img src={prof_img} alt='hi!' width='240' height='240' />
-			</div>
-
-			<br/>
-			<br/>
-
-			<Typography variant='h4' align='center'>
-				#OpenToWork
-			</Typography>
-
-			<br/>
+				<div className='ProfilePhotoImage'>
+					<img src={prof_img} alt='hi!' width='240' height='240' />
+				</div>
+			</Box>
 
 			<Box sx={{ marginLeft: '25%', width: '50%' }}>
 				<Paper>
@@ -73,27 +66,25 @@ function AboutMeContent() {
 									marginLeft: 'auto',
 									marginRight: 'auto',
 								}}  spacing={2}>
-									<>
-										<ListItem key={i} >
-											<Box width='100%'>
-												<Stack justifyContent='left' direction='row' spacing={2}>
-													<Box width='10%'>
-														<img alt={skill.name} width='24px' height='24px' src={skill.logo} style={{
-															margin: '5px',
-														}} />
-													</Box>
-													<Box width='40%' display='flex' alignItems='center'>
-														<Typography  variant='body2' noWrap >
-															{skill.name}
-														</Typography>
-													</Box>
-													<Box paddingTop='1.5%' alignItems='right' width='50%'>
-														<LinearProgress variant='determinate' value={skill.progress} />
-													</Box>
-												</Stack>
-											</Box>
-										</ListItem>
-									</>
+									<ListItem key={i} >
+										<Box width='100%'>
+											<Stack justifyContent='left' direction='row' spacing={2}>
+												<Box width='10%'>
+													<img alt={skill.name} width='24px' height='24px' src={skill.logo} style={{
+														margin: '5px',
+													}} />
+												</Box>
+												<Box width='40%' display='flex' alignItems='center'>
+													<Typography  variant='body2' noWrap >
+														{skill.name}
+													</Typography>
+												</Box>
+												<Box paddingTop='1.5%' alignItems='right' width='50%'>
+													<LinearProgress variant='determinate' value={skill.progress} />
+												</Box>
+											</Stack>
+										</Box>
+									</ListItem>
 								</Stack>
 								<Divider variant='middle' />
 							</>
@@ -107,9 +98,11 @@ function AboutMeContent() {
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
 				>
-					<Typography variant='h2' align='center' className='AccordionSubtitle'>
-						Services
-					</Typography>
+					<Box marginLeft='25%' marginRight='25%' width='100%'>
+						<Typography color='primary' variant='h4' align='center' className='AccordionSubtitle'>
+							Services
+						</Typography>
+					</Box>
 				</AccordionSummary>
 				<AccordionDetails>
 					<Stack sx={{
@@ -150,9 +143,11 @@ function AboutMeContent() {
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
 				>
-					<Typography variant='h2' align='center' className='AccordionSubtitle'>
-						Experience
-					</Typography>
+					<Box marginLeft='25%' marginRight='25%' width='100%'>
+						<Typography color='primary' variant='h4' align='center' className='AccordionSubtitle'>
+							Experience
+						</Typography>
+					</Box>
 				</AccordionSummary>
 				<AccordionDetails>
 					<Timeline />
@@ -162,9 +157,11 @@ function AboutMeContent() {
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
 				>
-					<Typography variant='h2' align='center' className='AccordionSubtitle'>
-						Professional profile
-					</Typography>
+					<Box marginLeft='25%' marginRight='25%' width='100%'>
+						<Typography color='primary' variant='h4' align='center' className='AccordionSubtitle'>
+							Professional profile
+						</Typography>
+					</Box>
 				</AccordionSummary>
 				<AccordionDetails>
 					<Paper elevation={6}>

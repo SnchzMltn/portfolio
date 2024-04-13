@@ -11,4 +11,5 @@
 }
 .MuiButton-outlined:hover {
 	box-shadow: inset 400px 0 0 0 #93BFCF;
+	color: white;
 }

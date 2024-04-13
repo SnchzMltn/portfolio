@@ -3,7 +3,7 @@ import { AppBar, IconButton, Menu, MenuItem, Toolbar } from '@material-ui/core';
 import { Link } from "react-router-dom";
 import MenuIcon from '@material-ui/icons/Menu';
 import './Header.css';
-import name_typography from '../../static/name_typography.png';
+import monogram from '../../static/msm-white.png';
 
 function Header() {
 	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -24,8 +24,8 @@ function Header() {
 					<IconButton edge="start" color="inherit" aria-label="menu" onClick={handleMenu}>
 						<MenuIcon />
 					</IconButton>
-					<div className='NameTypography'>
-						<img src={name_typography} alt='typography' width='64' height='64' />
+					<div className='NameMonogram'>
+						<img src={monogram} alt='monogram' width='64' height='64' />
 					</div>
 					<Menu
 						id="menu-appbar"
