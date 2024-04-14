@@ -25,7 +25,7 @@ function Header() {
 						<MenuIcon />
 					</IconButton>
 					<div className='NameMonogram'>
-						<img src={monogram} alt='monogram' width='64' height='64' />
+						<img src={monogram} alt='monogram' width='32' height='32' />
 					</div>
 					<Menu
 						id="menu-appbar"

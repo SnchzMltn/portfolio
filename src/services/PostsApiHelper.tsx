@@ -10,6 +10,10 @@ async function fetchPosts(): Promise<Posts[]> {
 			if (response.ok) {
 				return response.json();
 			}
+		})
+		.catch(error => {
+			console.debug(error);
+			return Promise.resolve([]);
 		});
       }
 
@@ -19,6 +23,10 @@ async function fetchPostsById(id: string): Promise<Posts> {
 			if (response.ok) {
 				return response.json();
 			}
+		})
+		.catch(error => {
+			console.debug(error);
+			return Promise.resolve([]);
 		});
       }
       

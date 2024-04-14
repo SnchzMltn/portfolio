@@ -59,7 +59,7 @@ function AboutMeContent() {
 				<Paper>
 					<List>
 						{skillsArray.map((skill, i) => {
-							return <>
+							return <div key={i}>
 								<Stack direction='row' sx={{
 									paddingTop: '0.2%',
 									paddingBottom: '0.2%',
@@ -87,7 +87,7 @@ function AboutMeContent() {
 									</ListItem>
 								</Stack>
 								<Divider variant='middle' />
-							</>
+							</div>
 						})}
 					</List>
 				</Paper>

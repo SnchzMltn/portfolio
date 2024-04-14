@@ -21,9 +21,9 @@ function Timeline() {
 	return (
 		<div className="Timeline">
 			<TimelineC>
-				{XP.map(item => {
+				{XP.map((item, i) => {
 					return (
-						<TimelineItem>
+						<TimelineItem key={i}>
 							<TimelineOppositeContent>
 								<Typography variant='subtitle2'>
 									{ item.dates }

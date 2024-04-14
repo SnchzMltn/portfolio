@@ -26,7 +26,8 @@ function App() {
   		  setPosts(postsArray);
   		})
   	} catch (error) {
-  		console.error('Error:', error);
+  		console.debug(error);
+      setPosts([]);
   	}
   }, []);
 
