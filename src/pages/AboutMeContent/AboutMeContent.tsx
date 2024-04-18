@@ -56,7 +56,7 @@ function AboutMeContent() {
 			</Box>
 
 			<Box sx={{ marginLeft: '25%', width: '50%' }}>
-				<Paper>
+				<Paper elevation={0}>
 					<List>
 						{skillsArray.map((skill, i) => {
 							return <div key={i}>

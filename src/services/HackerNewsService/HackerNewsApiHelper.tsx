@@ -15,7 +15,7 @@ async function fetchTopStories(): Promise<number[]> {
 		});
 }
 
-async function fetchDetailsById(id:number): Promise<HackerNewsPost> {
+async function fetchStoryDetailsById(id:number): Promise<HackerNewsPost> {
 	return await fetch(`${BASE_URL}${STORY_DETAILS_ENDPOINT}/${id}.json`)
 		.then(response => {
 			if(response.ok) {
@@ -26,4 +26,4 @@ async function fetchDetailsById(id:number): Promise<HackerNewsPost> {
 		});
 }
 
-export { fetchTopStories, fetchDetailsById };
+export { fetchTopStories, fetchStoryDetailsById };

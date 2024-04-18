@@ -21,14 +21,12 @@ function App() {
 
   const [posts, setPosts] = useState<Posts[]>([]);
   useEffect(() => {
-  	try {
-  		fetchPosts().then(postsArray => {
-  		  setPosts(postsArray);
-  		})
-  	} catch (error) {
-  		console.debug(error);
+    fetchPosts().then(postsArray => {
+      setPosts(postsArray);
+    }).catch(error => {
+      console.debug(error);
       setPosts([]);
-  	}
+    })
   }, []);
 
   const theme = createTheme({

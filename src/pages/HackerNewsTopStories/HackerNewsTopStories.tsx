@@ -2,7 +2,7 @@ import { Button, Divider, Stack } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { Paper, Typography } from '@material-ui/core';
 import { useEffect, useState } from "react";
-import { fetchDetailsById, fetchTopStories } from '../../services/HackerNewsService/HackerNewsApiHelper';
+import { fetchStoryDetailsById, fetchTopStories } from '../../services/HackerNewsService/HackerNewsApiHelper';
 import { HackerNewsPost } from '../../services/HackerNewsService/HackerNewsPost';
 import './HackerNewsTopStories.css';
 
@@ -16,14 +16,15 @@ function HackerNewsTopStories(): JSX.Element {
 		}).then(values => {
 			for (let i = 0; i < 20; i++) {
 				if (values[i] != null) {
-					fetchDetailsById(values[i]).then(storyDetailsObject => {
-						setOutput(prev => new Set(prev).add(storyDetailsObject));
-						return storySet.add(storyDetailsObject);
+					fetchStoryDetailsById(values[i]).then(storyDetailsObject => {
+						if (!postsOutput.has(storyDetailsObject)) setOutput(prev => new Set(prev).add(storyDetailsObject));
+						storySet.add(storyDetailsObject);
+						return;
 					});
 				}
 			}
 		});
-	}, []);
+	});
 
 	return (
 		<div className='mainContainer'>
@@ -56,31 +57,29 @@ function HackerNewsTopStories(): JSX.Element {
 function TableRow(props: { postsSet: Set<HackerNewsPost>; }): JSX.Element {
 	return (
 		<>
-			{Array.from(props.postsSet).sort((item1, item2) => item2.score - item1.score).map(post => {
+			{Array.from(props.postsSet).sort((item1, item2) => item2.score - item1.score).map((post, setId) => {
 				return (
-					<>
-						<tr key={post.id}>
-							<td key={post.id} className='row'>
-								<Typography variant='body1'>
-									<i>Score:</i> {post.score}
-								</Typography>
-							</td>
-							<Divider variant='inset' />
-							<td key={post.id} className='row'>
-								<Typography variant='body1'>
-									<i>Title:</i> {post.title}
-								</Typography>
-							</td>
-							<Divider variant='inset' />
-							<td key={post.id} className='link'>
-								<Button variant='outlined'>
-									<Link to={post.url}>
-										Go to post
-									</Link>
-								</Button>
-							</td>
-						</tr>
-					</>
+					<tr key={setId}>
+						<td className='row'>
+							<Typography variant='body1'>
+								<i>Score:</i> {post.score}
+							</Typography>
+						</td>
+						<Divider variant='inset' />
+						<td className='row'>
+							<Typography variant='body1'>
+								<i>Title:</i> {post.title}
+							</Typography>
+						</td>
+						<Divider variant='inset' />
+						<td className='link'>
+							<Button variant='outlined'>
+								<Link to={post.url}>
+									Go to post
+								</Link>
+							</Button>
+						</td>
+					</tr>
 				);
 			})}
 		</>
