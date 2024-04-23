@@ -32,10 +32,10 @@ function App() {
   const theme = createTheme({
     palette: {
       primary: {
-        main: COLORS.main,
+        main: COLORS.primary.main,
       },
       secondary: {
-        main: COLORS.secondary,
+        main: COLORS.secondary.main,
       }
     },
   });

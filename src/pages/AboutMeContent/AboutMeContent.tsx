@@ -1,5 +1,8 @@
 import { Accordion, AccordionDetails, AccordionSummary, Typography, Paper, List, ListItem, Box } from '@material-ui/core';
 import { Stack, Divider, LinearProgress } from '@mui/material';
+import { ThemeProvider } from '@material-ui/core';
+import { createTheme } from '@material-ui/core/styles';
+import { COLORS } from '../../static/constants';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import './AboutMeContent.css';
 
@@ -36,8 +39,18 @@ const skillsArray: Skill[] = [
 	{name: "Google Cloud Platform", rate: 3.5, progress: 75, logo: googleLogo},
 ]
 
-function AboutMeContent() {
+const theme = createTheme({
+	palette: {
+		primary: {
+			main: COLORS.primary.main,
+		},
+		secondary: {
+			main: COLORS.secondary.main,
+		}
+	},
+});
 
+function AboutMeContent() {
 	return (
 		<div style={{
 			display: 'block'
@@ -46,10 +59,11 @@ function AboutMeContent() {
 			<Box sx={{
 				margin: '5%'
 			}} >
-				<Typography variant='h3' align='center'>
-					Fullstack Software Engineer
-				</Typography>
-
+				<ThemeProvider theme={theme}>
+					<Typography color='primary' variant='h3' align='center'>
+						Fullstack Software Engineer
+					</Typography>
+				</ThemeProvider>
 				<div className='ProfilePhotoImage'>
 					<img src={prof_img} alt='hi!' width='240' height='240' />
 				</div>

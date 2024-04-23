@@ -7,19 +7,19 @@ import { HackerNewsPost } from '../../services/HackerNewsService/HackerNewsPost'
 import './HackerNewsTopStories.css';
 
 function HackerNewsTopStories(): JSX.Element {
-	const [postsOutput, setOutput] = useState<Set<HackerNewsPost>>(() => new Set());
+	const [postsOutput, setOutput] = useState<HackerNewsPost[]>([]);
 
 	useEffect(() => {
-		let storySet: Set<HackerNewsPost> = new Set();
 		fetchTopStories().then(values => {
-			return values;
+			return Array.from(values).sort().slice(0, 20);
 		}).then(values => {
 			for (let i = 0; i < 20; i++) {
 				if (values[i] != null) {
 					fetchStoryDetailsById(values[i]).then(storyDetailsObject => {
-						if (!postsOutput.has(storyDetailsObject)) setOutput(prev => new Set(prev).add(storyDetailsObject));
-						storySet.add(storyDetailsObject);
-						return;
+						setOutput(prev => {
+								prev.push(storyDetailsObject);
+								return prev;
+							});
 					});
 				}
 			}
@@ -29,14 +29,16 @@ function HackerNewsTopStories(): JSX.Element {
 	return (
 		<div className='mainContainer'>
 			<Stack justifyContent='center' direction={'column'} spacing={6} >
-				<Typography variant='h2' className='header'>Top Hacker News Posts</Typography>
+				<Typography variant='h2' className='header'>
+					Top Hacker News Posts
+				</Typography>
 				<Typography variant='h6'>
-					<Paper elevation={2}>
+					<Paper style={{ paddingLeft: '1%', paddingRight: '1%' }} elevation={2}>
 						Collection of top 20 posts in Y Combinator news section ordered by score (desc)
 					</Paper>
 				</Typography>
 				<Stack direction={'row'} spacing={10}>
-					{postsOutput.size > 0? 
+					{postsOutput.length > 0? 
 						<table className='tableContainer'>
 							<tbody>
 								<TableRow postsSet={postsOutput} />
@@ -45,7 +47,7 @@ function HackerNewsTopStories(): JSX.Element {
 					:
 					<>
 						<Typography variant='body2'>
-							Nothing to see here!
+							Loading...
 						</Typography>
 					</>}
 				</Stack>
@@ -54,7 +56,7 @@ function HackerNewsTopStories(): JSX.Element {
 	);
 }
 
-function TableRow(props: { postsSet: Set<HackerNewsPost>; }): JSX.Element {
+function TableRow(props: { postsSet: HackerNewsPost[] }): JSX.Element {
 	return (
 		<>
 			{Array.from(props.postsSet).sort((item1, item2) => item2.score - item1.score).map((post, setId) => {
@@ -68,14 +70,16 @@ function TableRow(props: { postsSet: Set<HackerNewsPost>; }): JSX.Element {
 						<Divider variant='inset' />
 						<td className='row'>
 							<Typography variant='body1'>
-								<i>Title:</i> {post.title}
+								{post.title}
 							</Typography>
 						</td>
 						<Divider variant='inset' />
 						<td className='link'>
 							<Button variant='outlined'>
 								<Link to={post.url}>
-									Go to post
+									<strong>
+										Go to post
+									</strong>
 								</Link>
 							</Button>
 						</td>
