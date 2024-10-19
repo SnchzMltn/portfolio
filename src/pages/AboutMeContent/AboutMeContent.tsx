@@ -63,6 +63,9 @@ function AboutMeContent() {
 					<Typography color='primary' variant='h3' align='center'>
 						Fullstack Software Engineer
 					</Typography>
+					<Typography color='primary' variant='h4' align='center'>
+						Webdev @ <a href='https://apryse.com' rel='blank'>Apryse</a>
+					</Typography>
 				</ThemeProvider>
 				<div className='ProfilePhotoImage'>
 					<img src={prof_img} alt='hi!' width='240' height='240' />
