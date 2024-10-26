@@ -24,7 +24,7 @@ function HackerNewsTopStories(): JSX.Element {
 				}
 			}
 		});
-	});
+	}, []);
 
 	return (
 		<div className='mainContainer'>
@@ -38,7 +38,7 @@ function HackerNewsTopStories(): JSX.Element {
 					</Paper>
 				</Typography>
 				<Stack direction={'row'} spacing={10}>
-					{postsOutput.length > 0? 
+					{postsOutput && postsOutput.length > 0? 
 						<table className='tableContainer'>
 							<tbody>
 								<TableRow postsSet={postsOutput} />

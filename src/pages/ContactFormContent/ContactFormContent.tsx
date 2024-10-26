@@ -10,20 +10,15 @@ function ContactFromContent() {
 
 	return(
 		<div className="ContactFormContent">
-			<Box sx={{ marginLeft: '15px'  }}>
+			<Box>
 				<br />
 				<br />
-				<Typography align='center' variant='h1'>
-					Contact
-				</Typography>
-				<Typography align='left' variant='h4'>
-					I'd like to hear from you!
-				</Typography>
-				<Typography align='left' variant='body1'>
-					I'm currently open for work, please let me know via any of the channels below if you're intersted in working together!
-				</Typography>
 				<br />
-				<Stack direction="row" alignItems="center" spacing={2} >
+				<br />
+				<Typography marginX={'10%'} textAlign="left" variant='h2'>
+					Contact me via:
+				</Typography>
+				<Stack direction="row" alignItems="center" spacing={2} marginX={'10%'} >
 					<React.Fragment>
 						<a href='https://www.linkedin.com/in/miltonsanchezm/'>
 							<img src={linkedIn} height='40px' width='40px' alt='LinkedIn'/>
