@@ -5,7 +5,7 @@ import github from "../../static/icons/github.svg";
 import gmail from "../../static/icons/google-gmail.svg";
 import "./ContactFormContent.css";
 
-async function ContactFromContent() {
+function ContactFromContent() {
   return (
     <div className="ContactFormContent">
       <Box>

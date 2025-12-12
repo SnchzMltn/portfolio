@@ -1,7 +1,7 @@
 import React from "react";
 import { AppBar, IconButton, Menu, MenuItem, Toolbar } from "@mui/material";
-// import { MenuIcon } from '@mui/icons-material';
-import { Icon } from "@mui/material";
+import { Menu as MenuIcon } from '@mui/icons-material';
+// import { Icon } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import monogram from "../../static/msm-white.png";
@@ -28,8 +28,9 @@ function Header() {
             color="inherit"
             aria-label="menu"
             onClick={handleMenu}
+            size="large"
           >
-            <Icon />
+            <MenuIcon />
           </IconButton>
           <div className="NameMonogram">
             <img src={monogram} alt="monogram" width="32" height="32" />
@@ -57,9 +58,6 @@ function Header() {
             </MenuItem>
             <MenuItem onClick={handleClose}>
               <Link to="/news">News</Link>
-            </MenuItem>
-            <MenuItem onClick={handleClose}>
-              <Link to="/blog">Blog</Link>
             </MenuItem>
           </Menu>
         </Toolbar>

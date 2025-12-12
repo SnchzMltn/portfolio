@@ -27,7 +27,7 @@ function Timeline() {
     setCurrentItemIndex(() => index);
   };
 
-  const handleClose = (_index: number) => () => {
+  const handleClose = () => () => {
     setOpen(() => false);
     setCurrentItemIndex(() => -1);
   };
@@ -60,7 +60,7 @@ function Timeline() {
           );
         })}
         {open && (
-          <Dialog open={open} onClose={handleClose(currentItemIndex)}>
+          <Dialog open={open} onClose={handleClose()}>
             <DialogContent>
               <DialogContentText>
                 <Typography variant="h3">

@@ -31,7 +31,7 @@ type Skill = {
   name: string;
   rate: number;
   progress: number;
-  logo: any;
+  logo: string;
 };
 
 const skillsArray: Skill[] = [
