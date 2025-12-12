@@ -1,7 +1,8 @@
-import React from "react";
-import { CardContent as CardContentC, Typography } from "@material-ui/core";
+import { Typography, CardContent as CardContentC } from "@mui/material";
+// import React from "react";
+// import { CardContent as CardContentC, Typography } from "@material-ui/core";
 
-function CardContent(object: { role: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; company: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; description: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; tools: any[]; extra_tools: any[]; dates: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }) {
+function CardContent(object: { description: string; tools: string[]; extra_tools?: string[]; dates: string; }) {
 	return (
 		<CardContentC>
 			

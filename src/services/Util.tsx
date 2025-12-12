@@ -1,4 +1,4 @@
-import { Posts } from "./Posts";
+import type { Posts } from "./Posts";
 
 function findPostById(list: Posts[], lookup: string | undefined): Posts | number | any {
 	for (let i = 0; i < list.length; i++) {

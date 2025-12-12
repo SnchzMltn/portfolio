@@ -1,8 +1,8 @@
-import { Button, Divider } from '@mui/material';
-import { Posts } from '../../services/Posts';
+import { Button, Divider, Typography } from '@mui/material';
+import type { Posts } from '../../services/Posts';
 import './BlogPage.css';
 import { Link } from 'react-router-dom';
-import { Typography } from '@material-ui/core';
+import type { JSX } from 'react';
 
 function BlogPage(posts: { blogItems: Posts[] }): JSX.Element {
 

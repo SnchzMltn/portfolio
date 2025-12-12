@@ -1,4 +1,4 @@
-import { HackerNewsPost } from "./HackerNewsPost";
+import type { HackerNewsPost } from "./HackerNewsPost";
 
 const BASE_URL = `https://hacker-news.firebaseio.com/v0`;
 const TOP_STORIES_ENDPOINT = `/topstories.json`;

@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
-import { Posts } from "../../services/Posts";
-import { Typography } from '@material-ui/core';
+import type { Posts } from "../../services/Posts";
 import { fetchPostsById } from '../../services/PostsApiHelper';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type JSX } from 'react';
+import { Typography } from "@mui/material";
 
-function BlogPageDetail(props: { blogItems: Posts[] }): JSX.Element {
+//@ts-ignore unused param
+function BlogPageDetail({ blogItems }: { blogItems: Posts[]}): JSX.Element {
 	const { id } = useParams();
 	const [currentPost, setCurrentPost] = useState<Posts>();
 
