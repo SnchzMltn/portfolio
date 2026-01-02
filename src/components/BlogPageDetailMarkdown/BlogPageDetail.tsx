@@ -4,10 +4,10 @@ import { fetchPostsById } from "../../services/PostsApiHelper";
 import { useEffect, useState, type JSX } from "react";
 import { Typography } from "@mui/material";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function BlogPageDetail({ blogItems }: { blogItems: Posts[] }): JSX.Element {
   const { id } = useParams();
   const [currentPost, setCurrentPost] = useState<Posts>();
+  if (!blogItems) return <p>No blog items available...</p>
 
   useEffect(() => {
     try {

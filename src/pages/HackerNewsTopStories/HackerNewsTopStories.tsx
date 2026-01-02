@@ -9,24 +9,19 @@ import type { HackerNewsPost } from "../../services/HackerNewsService/HackerNews
 import "./HackerNewsTopStories.css";
 
 function HackerNewsTopStories(): JSX.Element {
-  const [postsOutput, setOutput] = useState<HackerNewsPost[]>([]);
+  const [postsOutput, setPostsOutput] = useState<HackerNewsPost[]>([]);
 
   useEffect(() => {
     fetchTopStories()
       .then((values) => {
         return Array.from(values).sort().slice(0, 20);
       })
-      .then((values) => {
-        for (let i = 0; i < 20; i++) {
-          if (values[i] != null) {
-            fetchStoryDetailsById(values[i]).then((storyDetailsObject) => {
-              setOutput((prev) => {
-                prev.push(storyDetailsObject);
-                return prev;
-              });
-            });
-          }
-        }
+      .then(async (values) => {
+        return Promise.all(
+          values.map((id) => fetchStoryDetailsById(id))
+        ).then((posts) => {
+          setPostsOutput(posts);
+        });
       });
   }, []);
 
