@@ -18,7 +18,7 @@ import prof_img from "../../static/img_prof_2048.jpeg";
 import javaLogo from "../../static/icons/java.svg";
 import pythonLogo from "../../static/icons/python.svg";
 import sqlLogo from "../../static/icons/sql.svg";
-import mongoLogo from "../../static/icons/mongodb.svg";
+import dbLogo from "../../static/icons/dbicon.png";
 import reactLogo from "../../static/icons/react.svg";
 import html5Logo from "../../static/icons/html5.svg";
 import awsLogo from "../../static/icons/aws.svg";
@@ -29,25 +29,28 @@ import { COLORS, PROFESSIONAL_PROFILE } from "../../static/constants";
 
 type Skill = {
   name: string;
-  rate: number;
   progress: number;
   logo: string;
 };
 
 const skillsArray: Skill[] = [
-  { name: "Java (JDK 8+)", rate: 5, progress: 100, logo: javaLogo },
-  { name: "Python", rate: 4, progress: 80, logo: pythonLogo },
-  { name: "Relational Database (SQL)", rate: 5, progress: 100, logo: sqlLogo },
+  { name: "Java (JDK 8+)", progress: 100, logo: javaLogo },
+  { name: "Python", progress: 80, logo: pythonLogo },
+  { name: "Relational Database (SQL)", progress: 100, logo: sqlLogo },
   {
     name: "Non-relational Database (NoSQL)",
-    rate: 4,
-    progress: 80,
-    logo: mongoLogo,
+    progress: 90,
+    logo: dbLogo,
   },
-  { name: "React", rate: 3.5, progress: 75, logo: reactLogo },
-  { name: "HTML5/CSS3", rate: 5, progress: 100, logo: html5Logo },
-  { name: "Amazon Web Services", rate: 4, progress: 80, logo: awsLogo },
-  { name: "Google Cloud Platform", rate: 3.5, progress: 75, logo: googleLogo },
+  {
+    name: "Vector Database",
+    progress: 60,
+    logo: dbLogo,
+  },
+  { name: "React", progress: 75, logo: reactLogo },
+  { name: "HTML5/CSS3", progress: 100, logo: html5Logo },
+  { name: "Amazon Web Services", progress: 80, logo: awsLogo },
+  { name: "Google Cloud Platform", progress: 75, logo: googleLogo },
 ];
 
 const theme = createTheme({
