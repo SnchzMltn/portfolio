@@ -94,7 +94,7 @@ function AboutMeContent() {
       </Box>
 
       <Box sx={{ margin: 'auto', width: "75%" }}>
-        <Paper elevation={0}>
+        <Paper variant="outlined">
           <List>
             {skillsArray.map((skill, i) => {
               return (
@@ -172,7 +172,7 @@ function AboutMeContent() {
             }}
             spacing={2}
           >
-            <Paper elevation={6}>
+            <Paper variant="outlined" >
               <div style={{ margin: "1.5%" }}>
                 <Typography variant="h5" align="center">
                   Consulting
@@ -185,7 +185,7 @@ function AboutMeContent() {
                 </Typography>
               </div>
             </Paper>
-            <Paper elevation={6}>
+            <Paper variant="outlined">
               <div style={{ margin: "1.5%" }}>
                 <Typography variant="h5" align="center">
                   Tutoring / Workshops
@@ -234,7 +234,7 @@ function AboutMeContent() {
           </Box>
         </AccordionSummary>
         <AccordionDetails>
-          <Paper elevation={6}>
+          <Paper variant="outlined">
             <div style={{ margin: "2.5%" }}>
               <Typography align="center" variant="body1">
                 {PROFESSIONAL_PROFILE}

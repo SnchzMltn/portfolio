@@ -7,7 +7,6 @@ import { Typography } from "@mui/material";
 function BlogPageDetail({ blogItems }: { blogItems: Posts[] }): JSX.Element {
   const { id } = useParams();
   const [currentPost, setCurrentPost] = useState<Posts>();
-  if (!blogItems) return <p>No blog items available...</p>
 
   useEffect(() => {
     try {
@@ -18,6 +17,8 @@ function BlogPageDetail({ blogItems }: { blogItems: Posts[] }): JSX.Element {
       console.log(error);
     }
   });
+
+  if (!blogItems) return <p>No blog items available...</p>;
 
   const blogPost = (
     <div>

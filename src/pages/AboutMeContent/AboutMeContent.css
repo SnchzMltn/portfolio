@@ -15,3 +15,11 @@
 	border: 5px solid #6096B4;
 	border-radius: 50px;
 }
+
+@media (max-width: 768px) {
+	.AccordionSubtitle {
+		border: none;
+		white-space: wrap;
+		text-decoration: underline dotted #6096B4;
+	}
+}
