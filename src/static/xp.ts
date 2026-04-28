@@ -5,7 +5,7 @@ const XP =
 		role: "Web developer",
 		company: "Apryse",
 		description: "Developing and incrementing features around the main company website, managed all infrastructre as well as the CMS for the webpage content.",
-		tools: ["React", "Sanity", "AWS", "Github"],
+		tools: ["React", "Sanity", "NoSQL", "Docker", "AWS", "Github"],
 		extra_tools: ["Web development" ,"Distributed server management", "Load-balancing and scalability"],
 		dates: "May 2024 - Present"
 	},

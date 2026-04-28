@@ -181,7 +181,7 @@ function AboutMeContent() {
               <Divider sx={{ margin: "1%" }} />
               <div style={{ margin: "1.5%" }}>
                 <Typography align="center" variant="body2">
-                  I am currently available for consulting jobs.
+                  I am currently <a href="mailto:snchzmltn1994@gmail.com" rel="blank">available</a> for consulting jobs.
                 </Typography>
               </div>
             </Paper>
@@ -236,9 +236,7 @@ function AboutMeContent() {
         <AccordionDetails>
           <Paper variant="outlined">
             <div style={{ margin: "2.5%" }}>
-              <Typography align="center" variant="body1">
-                {PROFESSIONAL_PROFILE}
-              </Typography>
+              <Typography align="center">{PROFESSIONAL_PROFILE}</Typography>
             </div>
           </Paper>
         </AccordionDetails>
