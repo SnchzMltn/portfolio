@@ -77,7 +77,7 @@ function TableRow(props: { postsSet: HackerNewsPost[] }): JSX.Element {
               </td>
               <Divider variant="inset" />
               <td className="link">
-                <Button variant="outlined">
+                <Button variant="contained">
                   <Link to={post.url}>
                     <strong>Go to post</strong>
                   </Link>
