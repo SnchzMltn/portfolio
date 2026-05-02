@@ -6,16 +6,17 @@ import ContactFormContent from "./pages/ContactFormContent/ContactFormContent";
 import { createTheme } from "@mui/material";
 import { COLORS } from "./static/constants";
 import "./App.css";
-import { useState, useMemo } from "react";
+import { useState, useEffect } from "react";
 import type { Posts } from "./services/Posts";
 import { fetchPosts } from "./services/PostsApiHelper";
 import BlogPageDetail from "./components/BlogPageDetailMarkdown/BlogPageDetail";
 import BlogPage from "./pages/BlogPage/BlogPage";
 import HackerNewsTopStories from "./pages/HackerNewsTopStories/HackerNewsTopStories";
+import { STATIC_BLOG_POSTS } from "./pages/BlogPage/staticBlogPosts";
 
 function App() {
-  const [posts, setPosts] = useState<Posts[]>([]);
-  useMemo(() => {
+  const [posts, setPosts] = useState<Array<Partial<Posts> & { id: string }>>([]);
+  useEffect(() => {
     fetchPosts().then(postsArray => {
       setPosts(postsArray);
     }).catch(error => {
@@ -41,7 +42,7 @@ function App() {
         <Routes>
           <Route path="/" element={<AboutMeContent />} />
           <Route path='/about-me' element={<AboutMeContent />} />
-          <Route path='/blog' element={<BlogPage blogItems={posts} />} />
+          <Route path='/blog' element={<BlogPage blogItems={posts.length > 0? posts : STATIC_BLOG_POSTS} />} />
           <Route path='/blog/:id' element={<BlogPageDetail blogItems={posts} />} />
           <Route path="/contact" element={<ContactFormContent />} />
           <Route path='/news' element={<HackerNewsTopStories />} />

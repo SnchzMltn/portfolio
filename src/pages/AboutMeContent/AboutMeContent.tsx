@@ -181,21 +181,20 @@ function AboutMeContent() {
               <Divider sx={{ margin: "1%" }} />
               <div style={{ margin: "1.5%" }}>
                 <Typography align="center" variant="body2">
-                  I am currently <a href="mailto:snchzmltn1994@gmail.com" rel="blank">available</a> for consulting jobs.
+                  Want to discuss the viability of your project? Have you got an idea but unsure about how to proceed? I am currently <a href="mailto:snchzmltn1994@gmail.com" rel="blank">available</a> for consulting jobs.
                 </Typography>
               </div>
             </Paper>
             <Paper variant="outlined">
               <div style={{ margin: "1.5%" }}>
                 <Typography variant="h5" align="center">
-                  Tutoring / Workshops
+                  Tutoring
                 </Typography>
               </div>
               <Divider sx={{ margin: "1%" }} />
               <div style={{ margin: "1.5%" }}>
                 <Typography variant="body2" align="center">
-                  If you need help with your technical classes, projects, ideas,
-                  and you want to have a chat, reach out to me!
+                  Do you need help with your classes, projects, ideas, etc.? Let's connect and have a chat, <a href="mailto:snchzmltn1994@gmail.com" rel="blank">reach out to me</a>!
                 </Typography>
               </div>
             </Paper>

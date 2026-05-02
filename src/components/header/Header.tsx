@@ -14,7 +14,6 @@ function Header() {
     setAnchorEl(event.currentTarget);
   };
 
-  // const handleClose = (event: React.MouseEvent<HTMLElement>) => {
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -55,6 +54,9 @@ function Header() {
             </MenuItem>
             <MenuItem onClick={handleClose}>
               <Link to="/contact">Contact Me</Link>
+            </MenuItem>
+            <MenuItem onClick={handleClose}>
+              <Link to="/blog">Blog</Link>
             </MenuItem>
             <MenuItem onClick={handleClose}>
               <Link to="/news">News</Link>

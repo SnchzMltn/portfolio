@@ -3,10 +3,11 @@ import type { Posts } from "../../services/Posts";
 import { fetchPostsById } from "../../services/PostsApiHelper";
 import { useEffect, useState, type JSX } from "react";
 import { Typography } from "@mui/material";
+import { STATIC_BLOG_POSTS } from "../../pages/BlogPage/staticBlogPosts";
 
-function BlogPageDetail({ blogItems }: { blogItems: Posts[] }): JSX.Element {
+function BlogPageDetail({ blogItems }: { blogItems: Array<Partial<Posts> & { id: string }> }): JSX.Element {
   const { id } = useParams();
-  const [currentPost, setCurrentPost] = useState<Posts>();
+  const [currentPost, setCurrentPost] = useState<Partial<Posts> & { id: string }>();
 
   useEffect(() => {
     try {
@@ -18,7 +19,14 @@ function BlogPageDetail({ blogItems }: { blogItems: Posts[] }): JSX.Element {
     }
   });
 
-  if (!blogItems) return <p>No blog items available...</p>;
+  if (!currentPost) {
+    const staticPost = STATIC_BLOG_POSTS.find((post) => post.id === id);
+    console.debug('empty blog items, looking for statics: ', staticPost, id);
+    if (staticPost) setCurrentPost(staticPost);
+  };
+
+
+  if (!currentPost && !blogItems) return <p>Loading...</p>;
 
   const blogPost = (
     <div>

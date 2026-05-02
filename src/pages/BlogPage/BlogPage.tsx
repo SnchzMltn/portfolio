@@ -4,7 +4,7 @@ import './BlogPage.css';
 import { Link } from 'react-router-dom';
 import type { JSX } from 'react';
 
-function BlogPage(posts: { blogItems: Posts[] }): JSX.Element {
+function BlogPage(posts: { blogItems: Array<Partial<Posts> & { id: string }> }): JSX.Element {
 
   return (
     <div className='mainContainer'>
@@ -26,8 +26,10 @@ function BlogPage(posts: { blogItems: Posts[] }): JSX.Element {
 					</Typography>
 				</th>
 				<Divider variant='inset' />
-				<td key={item.id} className='link'>
-					<Button variant='contained'>
+				<td key={item.id} className='link' style={{
+					border: "none"
+				}}>
+					<Button variant='outlined' size='small'>
 						<Link to={`/blog/${item.id}`}>
 							View
 						</Link>
