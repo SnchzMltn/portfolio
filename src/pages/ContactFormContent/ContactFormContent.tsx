@@ -8,15 +8,14 @@ import "./ContactFormContent.css";
 function ContactFromContent() {
   return (
     <div className="ContactFormContent">
-      <Box>
-        <br />
-        <br />
-        <br />
-        <br />
-        <Typography marginX={"10%"} textAlign="left" variant="h2">
+      <Box className="contact-card">
+        <Typography variant="h2">
           Contact me via:
         </Typography>
-        <Stack direction="row" alignItems="center" spacing={2} marginX={"10%"}>
+        <Typography variant="body1" color="text.secondary">
+          Feel free to reach out for collaborations, consulting, or just a quick hello.
+        </Typography>
+        <Stack direction="row" alignItems="center" spacing={2} className="contact-links">
           <React.Fragment>
             <a href="https://www.linkedin.com/in/miltonsanchezm/">
               <img src={linkedIn} height="40px" width="40px" alt="LinkedIn" />

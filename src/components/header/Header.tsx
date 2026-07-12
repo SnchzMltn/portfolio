@@ -1,7 +1,6 @@
 import React from "react";
 import { AppBar, IconButton, Menu, MenuItem, Toolbar } from "@mui/material";
 import { Menu as MenuIcon } from '@mui/icons-material';
-// import { Icon } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import monogram from "../../static/msm-white.png";
@@ -42,10 +41,6 @@ function Header() {
               horizontal: "right",
             }}
             keepMounted
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "right",
-            }}
             open={open}
             onClose={handleClose}
           >

@@ -17,6 +17,7 @@ import {
 import React from "react";
 import "./Timeline.css";
 import { XP } from "../../static/xp";
+import { COLORS } from "../../static/constants";
 
 function Timeline() {
   const [open, setOpen] = React.useState(false);
@@ -39,10 +40,10 @@ function Timeline() {
           return (
             <TimelineItem key={i}>
               <TimelineOppositeContent>
-                <Typography variant="subtitle2">{item.dates}</Typography>
+                <Typography variant="subtitle2"><b>{item.dates}</b></Typography>
               </TimelineOppositeContent>
               <TimelineSeparator>
-                <TimelineDot color="grey" variant="outlined" />
+                <TimelineDot color="primary" variant="filled" />
                 <TimelineConnector />
               </TimelineSeparator>
               <TimelineContent>
@@ -52,7 +53,7 @@ function Timeline() {
                   onClick={handleOpen(item.index)}
                 >
                   <Typography variant="body2">
-                    {item.role} @ ({item.company})
+                    <b>{item.role}</b> @ ({item.company})
                   </Typography>
                 </Button>
               </TimelineContent>

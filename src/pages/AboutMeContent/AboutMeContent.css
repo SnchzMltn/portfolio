@@ -1,25 +1,74 @@
 .AboutMeContent {
-	text-align: justify;
+  text-align: justify;
+  padding: 1rem 0 3rem;
+}
+
+.AboutMeContent .MuiTypography-root {
+  color: #17324a;
+}
+
+.AboutMeContent .MuiPaper-root {
+  border: 1px solid rgba(96, 150, 180, 0.2);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 30px rgba(17, 50, 77, 0.06);
+}
+
+.AboutMeContent .MuiAccordion-root {
+  margin: 0.5rem;
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.84);
+}
+
+.AboutMeContent .MuiAccordionSummary-root {
+  min-height: 64px;
+  background: linear-gradient(90deg, rgba(147, 191, 207, 0.16), rgba(255, 255, 255, 0.72));
+}
+
+.AboutMeContent .MuiAccordionSummary-content {
+  margin: 0.75rem 0;
+}
+
+.ProfilePhotoImage {
+  display: flex;
+  justify-content: center;
+  margin: 1.75rem 0;
 }
 
 .ProfilePhotoImage img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 50%;
-	border: 5px solid #6096B4;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  box-shadow: 0 16px 35px rgba(17, 50, 77, 0.16);
 }
 
 .AccordionSubtitle {
-	padding: 1%;
-	border: 5px solid #6096B4;
-	border-radius: 50px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(96, 150, 180, 0.16), rgba(147, 191, 207, 0.16));
+}
+
+.AboutMeContent .MuiLinearProgress-root {
+  border-radius: 999px;
+  background-color: rgba(96, 150, 180, 0.16);
+}
+
+.AboutMeContent .MuiLinearProgress-bar {
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6096B4 0%, #93BFCF 100%);
 }
 
 @media (max-width: 768px) {
-	.AccordionSubtitle {
-		border: none;
-		white-space: wrap;
-		text-decoration: underline dotted #6096B4;
-	}
+  .AboutMeContent {
+    padding-top: 0.5rem;
+  }
+
+  .AccordionSubtitle {
+    border-radius: 14px;
+    white-space: normal;
+  }
+
+  .AboutMeContent .MuiAccordion-root {
+    margin: 0.75rem 0.5rem;
+  }
 }

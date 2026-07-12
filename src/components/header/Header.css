@@ -1,23 +1,53 @@
-a {
-	box-shadow: inset 0 0 0 0 #93BFCF;
-	transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-	color: inherit;
-	text-decoration: none;
-	padding: 1%;
-	margin: 1%;
+.Header .MuiAppBar-root {
+  background: rgba(255, 255, 255, 0.92);
+  color: #17324a;
+  box-shadow: 0 8px 24px rgba(17, 50, 77, 0.08);
+  border-bottom: 1px solid rgba(96, 150, 180, 0.16);
+  backdrop-filter: blur(10px);
 }
 
-a:hover {
-	box-shadow: inset 200px 0 0 0 #93BFCF;
-	color: white;
+.Header .MuiToolbar-root {
+  min-height: 70px;
 }
 
-.Header {
-	text-align: center;
+.Header .MuiIconButton-root {
+  position: absolute;
+  left: 0.5rem;
+  color: inherit;
+  z-index: 1;
 }
 
 .NameMonogram {
-	margin-top: 3px;
-	margin-bottom: 3px;
-	border-radius: 20px;
+  align-self: center;
+  width: 42px;
+  height: 42px;
+  margin-left:auto;
+  padding: 0.35rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #6096B4, #93BFCF);
+  box-shadow: 0 8px 18px rgba(96, 150, 180, 0.18);
+}
+
+.NameMonogram img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.Header .MuiMenu-paper {
+  border-radius: 16px;
+  border: 1px solid rgba(96, 150, 180, 0.16);
+  box-shadow: 0 10px 24px rgba(17, 50, 77, 0.10);
+}
+
+.Header .MuiMenuItem-root a {
+  display: block;
+  width: 100%;
+  padding: 0.2rem 0;
+  color: #17324a;
+  font-weight: 600;
+}
+
+.Header .MuiMenuItem-root:hover {
+  background-color: rgba(96, 150, 180, 0.08);
 }

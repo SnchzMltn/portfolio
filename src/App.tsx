@@ -39,15 +39,17 @@ function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Route path="/" element={<AboutMeContent />} />
-          <Route path='/about-me' element={<AboutMeContent />} />
-          <Route path='/blog' element={<BlogPage blogItems={posts.length > 0? posts : STATIC_BLOG_POSTS} />} />
-          <Route path='/blog/:id' element={<BlogPageDetail blogItems={posts} />} />
-          <Route path="/contact" element={<ContactFormContent />} />
-          <Route path='/news' element={<HackerNewsTopStories />} />
-          <Route path="*" element={<p>Nothing to see here</p>} />
-        </Routes>
+        <div className="app-shell">
+          <Routes>
+            <Route path="/" element={<AboutMeContent />} />
+            <Route path='/about-me' element={<AboutMeContent />} />
+            <Route path='/blog' element={<BlogPage blogItems={posts.length > 0? posts : STATIC_BLOG_POSTS} />} />
+            <Route path='/blog/:id' element={<BlogPageDetail blogItems={posts} />} />
+            <Route path="/contact" element={<ContactFormContent />} />
+            <Route path='/news' element={<HackerNewsTopStories />} />
+            <Route path="*" element={<p>Nothing to see here</p>} />
+          </Routes>
+        </div>
       </BrowserRouter>
     </ThemeProvider>
   );

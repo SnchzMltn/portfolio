@@ -12,9 +12,7 @@ import {
 } from "@mui/material";
 import { Stack, Divider, LinearProgress } from "@mui/material";
 import "./AboutMeContent.css";
-
 import prof_img from "../../static/img_prof_2048.jpeg";
-
 import javaLogo from "../../static/icons/java.svg";
 import pythonLogo from "../../static/icons/python.svg";
 import sqlLogo from "../../static/icons/sql.svg";
@@ -164,12 +162,8 @@ function AboutMeContent() {
             </Typography>
           </Box>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails style={{ display: "flex", justifyContent: "center" }}>
           <Stack
-            sx={{
-              paddingLeft: "25%",
-              width: "50%",
-            }}
             spacing={2}
           >
             <Paper variant="outlined" >
@@ -215,7 +209,7 @@ function AboutMeContent() {
             </Typography>
           </Box>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails style={{ display: "flex", justifyContent: "center" }}>
           <Timeline />
         </AccordionDetails>
       </Accordion>
