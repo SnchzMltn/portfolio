@@ -17,7 +17,6 @@ import {
 import React from "react";
 import "./Timeline.css";
 import { XP } from "../../static/xp";
-import { COLORS } from "../../static/constants";
 
 function Timeline() {
   const [open, setOpen] = React.useState(false);
