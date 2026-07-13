@@ -21,6 +21,7 @@ import reactLogo from "../../static/icons/react.svg";
 import html5Logo from "../../static/icons/html5.svg";
 import awsLogo from "../../static/icons/aws.svg";
 import googleLogo from "../../static/icons/google.svg";
+import typescriptLogo from "../../static/icons/TypeScript.svg";
 
 import Timeline from "../../components/Timeline/Timeline";
 import { COLORS, PROFESSIONAL_PROFILE } from "../../static/constants";
@@ -46,6 +47,7 @@ const skillsArray: Skill[] = [
     logo: dbLogo,
   },
   { name: "React", progress: 75, logo: reactLogo },
+  { name: "TypeScript", progress: 85, logo: typescriptLogo },
   { name: "HTML5/CSS3", progress: 100, logo: html5Logo },
   { name: "Amazon Web Services", progress: 80, logo: awsLogo },
   { name: "Google Cloud Platform", progress: 75, logo: googleLogo },
@@ -70,11 +72,7 @@ function AboutMeContent() {
       }}
       className="AboutMeContent"
     >
-      <Box
-        sx={{
-          margin: "5%",
-        }}
-      >
+      <Box className="aboutHeader">
         <ThemeProvider theme={theme}>
           <Typography color="primary" variant="h3" align="center">
             Fullstack Software Engineer
@@ -86,35 +84,30 @@ function AboutMeContent() {
             </a>
           </Typography>
         </ThemeProvider>
-        <div className="ProfilePhotoImage" style={{ marginTop: '5%', marginBottom: '5%' }}>
+        <div className="ProfilePhotoImage aboutProfileImage">
           <img src={prof_img} alt="hi!" width="240" height="240" />
         </div>
       </Box>
 
-      <Box sx={{ margin: 'auto', width: "75%" }}>
+      <Box className="aboutSkillsContainer">
         <Paper variant="outlined">
           <List>
             {skillsArray.map((skill, i) => {
               return (
                 <div key={i}>
                   <Stack
+                    className="aboutSkillRow"
                     direction="row"
-                    sx={{
-                      paddingTop: "0.2%",
-                      paddingBottom: "0.2%",
-                      marginLeft: "auto",
-                      marginRight: "auto",
-                    }}
                     spacing={2}
                   >
-                    <ListItem key={i}>
+                    <ListItem className="aboutSkillListItem" key={i}>
                       <Box width="100%">
                         <Stack
                           justifyContent="left"
                           direction="row"
                           spacing={2}
                         >
-                          <Box width="10%">
+                          <Box className="aboutSkillIcon">
                             <img
                               alt={skill.name}
                               width="24px"
@@ -125,12 +118,12 @@ function AboutMeContent() {
                               }}
                             />
                           </Box>
-                          <Box width="40%" display="flex" alignItems="center">
+                          <Box className="aboutSkillName" display="flex" alignItems="center">
                             <Typography variant="body2" noWrap>
                               {skill.name}
                             </Typography>
                           </Box>
-                          <Box paddingTop="1.5%" alignItems="right" width="50%">
+                          <Box className="aboutSkillProgress" alignItems="right">
                             <LinearProgress
                               variant="determinate"
                               value={skill.progress}
@@ -147,7 +140,6 @@ function AboutMeContent() {
           </List>
         </Paper>
       </Box>
-      <br />
 
       <Accordion>
         <AccordionSummary>
@@ -172,9 +164,8 @@ function AboutMeContent() {
                   Consulting
                 </Typography>
               </div>
-              <Divider sx={{ margin: "1%" }} />
               <div style={{ margin: "1.5%" }}>
-                <Typography align="center" variant="body2">
+                <Typography variant="body2">
                   Want to discuss the viability of your project? Have you got an idea but unsure about how to proceed? I am currently <a href="mailto:snchzmltn1994@gmail.com" rel="blank">available</a> for consulting jobs.
                 </Typography>
               </div>
@@ -185,10 +176,9 @@ function AboutMeContent() {
                   Tutoring
                 </Typography>
               </div>
-              <Divider sx={{ margin: "1%" }} />
               <div style={{ margin: "1.5%" }}>
-                <Typography variant="body2" align="center">
-                  Do you need help with your classes, projects, ideas, etc.? Let's connect and have a chat, <a href="mailto:snchzmltn1994@gmail.com" rel="blank">reach out to me</a>!
+                <Typography variant="body2">
+                  Do you need help with your classes, projects, ideas, etc.? Let's connect and have a chat, <a href="mailto:snchzmltn1994@gmail.com" rel="blank">reach out</a>!
                 </Typography>
               </div>
             </Paper>
@@ -229,7 +219,7 @@ function AboutMeContent() {
         <AccordionDetails>
           <Paper variant="outlined">
             <div style={{ margin: "2.5%" }}>
-              <Typography align="center">{PROFESSIONAL_PROFILE}</Typography>
+              <Typography>{PROFESSIONAL_PROFILE}</Typography>
             </div>
           </Paper>
         </AccordionDetails>

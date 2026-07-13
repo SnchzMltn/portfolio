@@ -1,8 +1,8 @@
-const PROFESSIONAL_PROFILE = `Systems Engineer with 8+ years of experience designing, building, and delivering scalable software solutions across the full development lifecycle. Strong background in object-oriented design, abstraction, and functional programming, with hands-on expertise in full-stack development and architecture patterns such as MVC.
+const PROFESSIONAL_PROFILE = `Software Engineer with 7+ years of experience building and maintaining reliable web and backend applications across the full development lifecycle. Strong foundation in object-oriented and functional programming, clean API design, and full-stack development, with hands-on experience working across the stack using Java, C#, Python, and SQL.
 
-Proven track record of translating business requirements into reliable, maintainable systems, contributing across planning, design, development, testing, and production support. Experienced with Java, C#, Python, PHP, and SQL (PL/SQL), as well as modern development workflows and version control systems including Git and TFS.
+Experienced at translating business requirements into practical, well-tested solutions, contributing to planning and implementation, and collaborating closely with cross-functional teams. Comfortable working in modern development environments with Git, CI/CD, and cloud-based platforms, with a focus on building maintainable systems that balance performance, usability, and long-term scalability.
 
-Adept at problem-solving, system design, and cross-functional collaboration, with a focus on delivering high-quality software and practical, efficient solutions in complex environments.`
+Based in Vancouver, BC, I’m focused on delivering thoughtful, high-quality software and continuing to grow as an engineer.`
 
 const COLORS = {
 	primary: {

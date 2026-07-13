@@ -3,6 +3,42 @@
   padding: 1rem 0 3rem;
 }
 
+.aboutHeader {
+  margin: 5%;
+}
+
+.aboutSkillsContainer {
+  margin: auto;
+  width: 75%;
+}
+
+.aboutSkillRow {
+  padding-top: 0.2%;
+  padding-bottom: 0.2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aboutSkillListItem {
+  width: 100%;
+}
+
+.aboutSkillIcon {
+  width: 10%;
+  min-width: 32px;
+}
+
+.aboutSkillName {
+  width: 40%;
+  min-width: 120px;
+}
+
+.aboutSkillProgress {
+  width: 50%;
+  padding-top: 1.5%;
+  min-width: 180px;
+}
+
 .AboutMeContent .MuiTypography-root {
   color: #17324a;
 }
@@ -22,7 +58,7 @@
 
 .AboutMeContent .MuiAccordionSummary-root {
   min-height: 64px;
-  background: linear-gradient(90deg, rgba(147, 191, 207, 0.16), rgba(255, 255, 255, 0.72));
+  /* background: linear-gradient(90deg, rgba(147, 191, 207, 0.16), rgba(255, 255, 255, 0.72)); */
 }
 
 .AboutMeContent .MuiAccordionSummary-content {
@@ -58,9 +94,70 @@
   background: linear-gradient(90deg, #6096B4 0%, #93BFCF 100%);
 }
 
+@media (max-width: 1024px) {
+  .aboutHeader {
+    margin: 4%;
+  }
+
+  .aboutSkillsContainer {
+    width: 88%;
+  }
+
+  .aboutSkillName {
+    width: 35%;
+  }
+
+  .aboutSkillProgress {
+    width: 55%;
+  }
+}
+
 @media (max-width: 768px) {
   .AboutMeContent {
     padding-top: 0.5rem;
+  }
+
+  .aboutHeader {
+    margin: 1.25rem 1rem 0;
+  }
+
+  .aboutSkillsContainer {
+    width: 100%;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+  }
+
+  .aboutSkillRow {
+    padding: 0.35rem 0;
+  }
+
+  .aboutSkillListItem {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .aboutSkillIcon,
+  .aboutSkillName,
+  .aboutSkillProgress {
+    width: 100%;
+  }
+
+  .aboutSkillName {
+    min-width: 0;
+  }
+
+  .aboutSkillProgress {
+    min-width: 0;
+    padding-top: 0.5rem;
+  }
+
+  .ProfilePhotoImage {
+    margin: 1.25rem 0;
+  }
+
+  .ProfilePhotoImage img {
+    width: 180px;
+    height: 180px;
   }
 
   .AccordionSubtitle {
@@ -70,5 +167,26 @@
 
   .AboutMeContent .MuiAccordion-root {
     margin: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutHeader {
+    margin: 1rem 0.75rem 0;
+  }
+
+  .ProfilePhotoImage img {
+    width: 150px;
+    height: 150px;
+    border-width: 4px;
+    box-shadow: 0 10px 24px rgba(17, 50, 77, 0.14);
+  }
+
+  .AboutMeContent .MuiAccordionSummary-root {
+    min-height: 56px;
+  }
+
+  .AboutMeContent .MuiPaper-root {
+    border-radius: 14px;
   }
 }
