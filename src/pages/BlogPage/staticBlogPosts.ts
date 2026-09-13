@@ -25,4 +25,23 @@ At its core, this site is meant to be a hub for my online presence, a place to s
     createdBy: "snchzmltn",
     createdTime: new Date(2026, 5, 2),
   },
+  {
+    id: "3",
+		  readTime: 2,
+		  createdBy: "snchzmltn",
+		  createdTime: new Date(2026, 9, 12),
+		  title: "Agentic propgramming for software engineers",
+		  textContent: `Just like any other technology released after 2010, the big industries behind the AI models have been releasing incredible stuff. However, work for software engineers hasnt changed a lot quite yet. That's about to change.
+
+		  When I see the trends with the harness engineering (using agents in the development workflow, even as contributors) I can identify certain patterns too. Some of these results are quite impressive when joining together strategies that make agents be their own judges. These is not very different form software like Datadog that watches over a stream of data and sends notifications when certain thresholds are breached.
+
+		  Another example is code reviewing, right now we have native capabilities to Github (GH Copilot), as well as third-party's with experience in the field like LinearB or Sonarqube. Hence, again there are a lot of new interfaces to achieve the same specialized objectives sometimes at a minor cost.
+
+		  It is our job as Software Engineers to morally use these tools since governance is a work in progress for a lot of enterprises. Which by the way, should look out for cappabilities of agentic software on their products and services. Otherwise they might get a wild surprise when they get easily replaced.
+
+		  MCP is the new API, if your organization is mature enough to understand governance over agentic AI, they might implement a gateway for AI agents and MCP servers by implementing liteLLM or using cloud services like Google's Agent Gateway.
+
+		  We'll see what the future holds for us.
+		  `
+  }
 ];
