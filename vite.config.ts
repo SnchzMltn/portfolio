@@ -6,12 +6,17 @@ import Sitemap from 'vite-plugin-sitemap'
 export default defineConfig({
   server: {
     allowedHosts: ['miltonsanchez.com', '.miltonsanchez.com', 'localhost'],
-  },
+},
   plugins: [
     react(), Sitemap({ 
       hostname: 'https://miltonsanchez.com',
-      // basePath: '/',
-      dynamicRoutes: ['/about', '/contact'],
+      dynamicRoutes: ['/', '/about-me', '/blog', '/contact', '/news'],
+      robots: [
+        {
+          userAgent: '*',
+          allow: '/',
+        }
+      ],
     }),
   ],
   build: {
@@ -22,5 +27,7 @@ export default defineConfig({
         main: './index.html',
       }
     },
+    assetsDir: 'static/assets',
+    outDir: 'dist',
   }
 })
