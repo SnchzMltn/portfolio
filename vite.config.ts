@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [
     react(), Sitemap({ 
       hostname: 'https://miltonsanchez.com',
-      dynamicRoutes: ['/', '/about-me', '/blog', '/contact', '/news'],
+      dynamicRoutes: ['/about-me', '/blog', '/contact', '/news'],
       robots: [
         {
           userAgent: '*',
