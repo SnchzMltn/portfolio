@@ -44,21 +44,24 @@
 }
 
 .AboutMeContent .MuiPaper-root {
+  margin-top: 5%;
+  margin-bottom: 5%;
   border: 1px solid rgba(96, 150, 180, 0.2);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 12px 30px rgba(17, 50, 77, 0.06);
+  box-shadow: 8px 12px grey;
 }
 
 .AboutMeContent .MuiAccordion-root {
-  margin: 0.5rem;
+  margin: 1rem;
   margin-left: auto;
-  background: rgba(255, 255, 255, 0.84);
+  background: whitesmoke;
 }
 
 .AboutMeContent .MuiAccordionSummary-root {
   min-height: 64px;
-  /* background: linear-gradient(90deg, rgba(147, 191, 207, 0.16), rgba(255, 255, 255, 0.72)); */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .AboutMeContent .MuiAccordionSummary-content {
@@ -76,12 +79,7 @@
   margin: 0 auto;
   border-radius: 50%;
   border: 5px solid #ffffff;
-  box-shadow: 0 16px 35px rgba(17, 50, 77, 0.16);
-}
-
-.AccordionSubtitle {
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(96, 150, 180, 0.16), rgba(147, 191, 207, 0.16));
+  box-shadow: 8px 10px darkslategrey;
 }
 
 .AboutMeContent .MuiLinearProgress-root {
@@ -179,7 +177,7 @@
     width: 150px;
     height: 150px;
     border-width: 4px;
-    box-shadow: 0 10px 24px rgba(17, 50, 77, 0.14);
+    box-shadow: 8px 12px darkslategrey;
   }
 
   .AboutMeContent .MuiAccordionSummary-root {

@@ -10,7 +10,7 @@ import {
   createTheme,
   ThemeProvider,
 } from "@mui/material";
-import { Stack, Divider, LinearProgress } from "@mui/material";
+import { Stack, LinearProgress } from "@mui/material";
 import "./AboutMeContent.css";
 import prof_img from "../../static/img_prof_2048.jpeg";
 import javaLogo from "../../static/icons/java.svg";
@@ -46,11 +46,13 @@ const skillsArray: Skill[] = [
     progress: 60,
     logo: dbLogo,
   },
-  { name: "React", progress: 75, logo: reactLogo },
+  { name: "React", progress: 80, logo: reactLogo },
   { name: "TypeScript", progress: 85, logo: typescriptLogo },
   { name: "HTML5/CSS3", progress: 100, logo: html5Logo },
-  { name: "Amazon Web Services", progress: 80, logo: awsLogo },
-  { name: "Google Cloud Platform", progress: 75, logo: googleLogo },
+  { name: "Amazon Web Services", progress: 90, logo: awsLogo },
+  { name: "Google Cloud Platform", progress: 80, logo: googleLogo },
+  { name: "Docker", progress: 80, logo: dbLogo },
+  { name: "AI/ML", progress: 80, logo: dbLogo },
 ];
 
 const theme = createTheme({
@@ -133,7 +135,6 @@ function AboutMeContent() {
                       </Box>
                     </ListItem>
                   </Stack>
-                  <Divider variant="middle" />
                 </div>
               );
             })}
@@ -158,6 +159,18 @@ function AboutMeContent() {
           <Stack
             spacing={2}
           >
+            <Paper variant="outlined" >
+              <div style={{ margin: "1.5%" }}>
+                <Typography variant="h5" align="center">
+                  Project hosting
+                </Typography>
+              </div>
+              <div style={{ margin: "1.5%" }}>
+                <Typography variant="body2">
+                  Have you built something amazing that you want to share with the world? I can help you host your project on a cloud platform, and even help you set up a CI/CD pipeline for your project.
+                </Typography>
+              </div>
+            </Paper>
             <Paper variant="outlined" >
               <div style={{ margin: "1.5%" }}>
                 <Typography variant="h5" align="center">
